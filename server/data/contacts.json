@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Juan Pérez",
+    "email": "juan@example.com",
+    "company": "Acme",
+    "phone": "+52 55 1234 5678",
+    "service": "web",
+    "message": "Necesitamos un sitio web corporativo con blog.",
+    "id": "d65c79d9-7825-4578-ad3b-c7963e46828c",
+    "ts": "2026-01-23T21:10:09.650Z",
+    "ip": "::1",
+    "ua": "node"
+  },
+  {
+    "name": "Usuario 1",
+    "email": "user1@example.com",
+    "company": "",
+    "phone": "",
+    "service": "",
+    "message": "Mensaje de prueba de carga para contacto.",
+    "id": "7462a37a-1dfd-4715-b563-1f8d4beb8828",
+    "ts": "2026-01-23T21:11:47.267Z",
+    "ip": "::1",
+    "ua": "node"
+  },
+  {
+    "name": "Usuario 7",
+    "email": "user7@example.com",
+    "company": "",
+    "phone": "",
+    "service": "",
+    "message": "Mensaje de prueba de carga para contacto.",
+    "id": "b2a7b7fa-3f0a-49c5-83b5-ee9168cc2a63",
+    "ts": "2026-01-23T21:11:47.295Z",
+    "ip": "::1",
+    "ua": "node"
+  },
+  {
+    "name": "Usuario 41",
+    "email": "user41@example.com",
+    "company": "",
+    "phone": "",
+    "service": "",
+    "message": "Mensaje de prueba de carga para contacto.",
+    "id": "2dfa7b39-3db5-4b88-9704-7bdcc1ebf9dd",
+    "ts": "2026-01-23T21:11:47.329Z",
+    "ip": "::1",
+    "ua": "node"
+  },
+  {
+    "name": "Usuario 2",
+    "email": "user2@example.com",
+    "company": "",
+    "phone": "",
+    "service": "",
+    "message": "Mensaje de prueba de carga para contacto.",
+    "id": "d91e5c08-a9db-4cfd-9880-9e4dd753a2e4",
+    "ts": "2026-01-23T21:12:15.641Z",
+    "ip": "::1",
+    "ua": "node"
+  },
+  {
+    "name": "Usuario 6",
+    "email": "user6@example.com",
+    "company": "",
+    "phone": "",
+    "service": "",
+    "message": "Mensaje de prueba de carga para contacto.",
+    "id": "6ba1fd34-3301-4a3c-84e0-1c42e775cbb5",
+    "ts": "2026-01-23T21:12:15.676Z",
+    "ip": "::1",
+    "ua": "node"
+  },
+  {
+    "name": "Usuario 39",
+    "email": "user39@example.com",
+    "company": "",
+    "phone": "",
+    "service": "",
+    "message": "Mensaje de prueba de carga para contacto.",
+    "id": "619f6658-15f8-4c98-81d8-4846ff55de10",
+    "ts": "2026-01-23T21:12:15.704Z",
+    "ip": "::1",
+    "ua": "node"
+  }
+]

@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "scannedAt": "2026-01-24T05:05:05.006Z",
+    "total": 14,
+    "brokenCount": 0,
+    "internalChecked": 11
+  },
+  "results": [
+    {
+      "href": "/contacto",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/contacto",
+      "finalUrl": "http://localhost:8080/contacto",
+      "note": ""
+    },
+    {
+      "href": "/nosotros",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/nosotros",
+      "finalUrl": "http://localhost:8080/nosotros",
+      "note": ""
+    },
+    {
+      "href": "/servicios",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/servicios",
+      "finalUrl": "http://localhost:8080/servicios",
+      "note": ""
+    },
+    {
+      "href": "/portfolio",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/portfolio",
+      "finalUrl": "http://localhost:8080/portfolio",
+      "note": ""
+    },
+    {
+      "href": "/blog",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/blog",
+      "finalUrl": "http://localhost:8080/blog",
+      "note": ""
+    },
+    {
+      "href": "/privacidad",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/privacidad",
+      "finalUrl": "http://localhost:8080/privacidad",
+      "note": ""
+    },
+    {
+      "href": "/terminos",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/terminos",
+      "finalUrl": "http://localhost:8080/terminos",
+      "note": ""
+    },
+    {
+      "href": "/",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/",
+      "finalUrl": "http://localhost:8080/",
+      "note": ""
+    },
+    {
+      "href": "mailto:hola@clipot.com",
+      "type": "mailto",
+      "status": null,
+      "ok": true,
+      "checkedUrl": null,
+      "finalUrl": null,
+      "note": "No aplica HTTP"
+    },
+    {
+      "href": "tel:+525512345678",
+      "type": "tel",
+      "status": null,
+      "ok": true,
+      "checkedUrl": null,
+      "finalUrl": null,
+      "note": "No aplica HTTP"
+    },
+    {
+      "href": "https://www.kommo.com",
+      "type": "external",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "https://www.kommo.com",
+      "finalUrl": "https://www.kommo.com/",
+      "note": ""
+    },
+    {
+      "href": "/servicios/:slug",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/servicios/:slug",
+      "finalUrl": "http://localhost:8080/servicios/:slug",
+      "note": ""
+    },
+    {
+      "href": "/kommo",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/kommo",
+      "finalUrl": "http://localhost:8080/kommo",
+      "note": ""
+    },
+    {
+      "href": "/blog/:slug",
+      "type": "internal",
+      "status": 200,
+      "ok": true,
+      "checkedUrl": "http://localhost:8080/blog/:slug",
+      "finalUrl": "http://localhost:8080/blog/:slug",
+      "note": ""
+    }
+  ]
+}

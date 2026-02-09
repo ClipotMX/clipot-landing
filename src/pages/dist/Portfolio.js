@@ -1,0 +1,91 @@
+"use strict";
+exports.__esModule = true;
+var react_router_dom_1 = require("react-router-dom");
+var Header_1 = require("@/components/Header");
+var Footer_1 = require("@/components/Footer");
+var ChatWidget_1 = require("@/components/ChatWidget");
+var framer_motion_1 = require("framer-motion");
+var lucide_react_1 = require("lucide-react");
+var button_1 = require("@/components/ui/button");
+var SEO_1 = require("@/components/SEO");
+var projects = [
+    {
+        title: "Inmobiliaria Premium MX",
+        category: "Inmobiliario",
+        description: "Generación de leads calificados para desarrollos de lujo en CDMX.",
+        result: "+340% leads calificados",
+        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop"
+    },
+    {
+        title: "Fashion Store Online",
+        category: "Ecommerce",
+        description: "Estrategia completa de paid media y gestión de leads para tienda de moda.",
+        result: "+280% en ventas",
+        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop"
+    },
+    {
+        title: "Clínica Dental Smile",
+        category: "Salud",
+        description: "Campañas de generación de leads y gestión de citas automatizada.",
+        result: "98% tasa de asistencia",
+        image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop"
+    },
+    {
+        title: "Fintech Innovate",
+        category: "Finanzas",
+        description: "Estrategia de adquisición de usuarios para app de inversiones.",
+        result: "-65% costo por lead",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+    },
+    {
+        title: "Academia Online Pro",
+        category: "Educación",
+        description: "Generación de inscripciones para cursos profesionales online.",
+        result: "+500 alumnos/mes",
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop"
+    },
+    {
+        title: "Restaurant Chain MX",
+        category: "Restaurantes",
+        description: "Campañas de delivery y reservaciones para cadena de restaurantes.",
+        result: "+180% reservaciones",
+        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop"
+    },
+];
+var Portfolio = function () {
+    return (React.createElement("div", { className: "min-h-screen" },
+        React.createElement(SEO_1["default"], { title: "Portfolio de marketing digital | Casos de \u00E9xito \u2013 Clipot", description: "Casos de \u00E9xito en marketing digital: leads calificados, ventas y crecimiento real en m\u00FAltiples industrias.", keywords: ["portfolio marketing digital", "casos de éxito", "leads calificados", "ventas"] }),
+        React.createElement(Header_1["default"], null),
+        React.createElement("section", { className: "pt-32 pb-20 bg-background" },
+            React.createElement("div", { className: "container mx-auto px-4" },
+                React.createElement(framer_motion_1.motion.div, { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, className: "max-w-3xl mx-auto text-center" },
+                    React.createElement("span", { className: "text-sm font-medium text-primary mb-4 block" }, "PORTFOLIO"),
+                    React.createElement("h1", { className: "font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6" },
+                        React.createElement("span", { className: "sr-only" }, "Agencia de marketing digital"),
+                        "Resultados que",
+                        " ",
+                        React.createElement("span", { className: "text-primary" }, "hablan")),
+                    React.createElement("p", { className: "text-xl text-muted-foreground leading-relaxed" }, "Cada proyecto es una historia de crecimiento. Aqu\u00ED est\u00E1n algunos de nuestros casos de \u00E9xito.")))),
+        React.createElement("section", { className: "py-20 bg-muted" },
+            React.createElement("div", { className: "container mx-auto px-4" },
+                React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" }, projects.map(function (project, index) { return (React.createElement(framer_motion_1.motion.div, { key: project.title, initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { delay: index * 0.1 }, className: "bg-background rounded-2xl overflow-hidden group shadow-sm ring-1 ring-border hover:shadow-md transition-shadow" },
+                    React.createElement("div", { className: "aspect-[3/2] overflow-hidden" },
+                        React.createElement("img", { src: project.image, alt: project.title, className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" })),
+                    React.createElement("div", { className: "p-6" },
+                        React.createElement("span", { className: "text-xs font-medium text-primary uppercase tracking-wider" }, project.category),
+                        React.createElement("h3", { className: "font-display text-xl font-semibold mt-2 mb-3" }, project.title),
+                        React.createElement("p", { className: "text-muted-foreground text-sm mb-4" }, project.description),
+                        React.createElement("p", { className: "font-display text-2xl font-bold text-primary" }, project.result)))); })))),
+        React.createElement("section", { className: "py-20 bg-background" },
+            React.createElement("div", { className: "container mx-auto px-4" },
+                React.createElement(framer_motion_1.motion.div, { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, className: "max-w-2xl mx-auto text-center" },
+                    React.createElement("h2", { className: "font-display text-3xl md:text-4xl font-bold mb-6" }, "Tu negocio puede ser el pr\u00F3ximo"),
+                    React.createElement("p", { className: "text-lg text-muted-foreground mb-8" }, "Cu\u00E9ntanos sobre tu proyecto y dise\u00F1emos juntos una estrategia que genere resultados reales."),
+                    React.createElement(button_1.Button, { asChild: true, size: "lg" },
+                        React.createElement(react_router_dom_1.Link, { to: "/contacto" },
+                            "Empezar proyecto",
+                            React.createElement(lucide_react_1.ArrowRight, { className: "ml-2", size: 18 })))))),
+        React.createElement(Footer_1["default"], null),
+        React.createElement(ChatWidget_1["default"], null)));
+};
+exports["default"] = Portfolio;

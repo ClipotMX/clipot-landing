@@ -1,0 +1,128 @@
+[
+  {
+    "sessionId": "0dea9beb-72c8-4ad3-9cdb-f91c1f0a2eb0",
+    "text": "Hola desde test-chat",
+    "isUser": true,
+    "ts": "2026-01-24T17:20:55.275Z"
+  },
+  {
+    "sessionId": "cdb2cf0d-491b-492c-a2a1-dbf71f1bb5fc",
+    "text": "Hola",
+    "isUser": true,
+    "ts": "2026-01-24T17:21:48.606Z"
+  },
+  {
+    "sessionId": "cdb2cf0d-491b-492c-a2a1-dbf71f1bb5fc",
+    "text": "Necesito ayuda",
+    "isUser": true,
+    "ts": "2026-01-24T17:21:54.984Z"
+  },
+  {
+    "sessionId": "39f4bc7a-b62d-4236-ba1f-a0857d4b0a0b",
+    "text": "test",
+    "isUser": true,
+    "ts": "2026-01-24T19:57:22.440Z"
+  },
+  {
+    "sessionId": "69c2c6aa-f51f-4daa-b66a-32427a56cd3d",
+    "text": "123",
+    "isUser": true,
+    "ts": "2026-01-24T20:03:33.636Z"
+  },
+  {
+    "sessionId": "86c27477-ffb6-4bef-a984-1bc2732d3ff4",
+    "text": "hola",
+    "isUser": true,
+    "ts": "2026-01-24T20:05:16.380Z"
+  },
+  {
+    "sessionId": "c0d183d8-64c3-49ea-87fb-e8bc697d09af",
+    "text": "hola",
+    "isUser": true,
+    "ts": "2026-01-24T20:05:45.430Z"
+  },
+  {
+    "sessionId": "c0d183d8-64c3-49ea-87fb-e8bc697d09af",
+    "text": "necesito ayuda",
+    "isUser": true,
+    "ts": "2026-01-24T20:05:59.168Z"
+  },
+  {
+    "sessionId": "b73e23a4-e5b8-4f0e-9233-ea1d63b8afdd",
+    "text": "Hola",
+    "isUser": true,
+    "ts": "2026-01-24T20:09:29.343Z"
+  },
+  {
+    "sessionId": "b73e23a4-e5b8-4f0e-9233-ea1d63b8afdd",
+    "text": "necesito ayuda",
+    "isUser": true,
+    "ts": "2026-01-24T20:10:12.531Z"
+  },
+  {
+    "sessionId": "4b393064-5275-42b7-9275-04cb50b2e832",
+    "text": "Hola",
+    "isUser": true,
+    "ts": "2026-01-25T10:43:20.425Z"
+  },
+  {
+    "sessionId": "34166a8d-9ea4-471f-a8c4-08da2e8b7dee",
+    "text": "Prueba",
+    "isUser": true,
+    "ts": "2026-01-25T22:04:20.951Z"
+  },
+  {
+    "sessionId": "f5e6b122-f551-460f-840d-4b7a033dd99e",
+    "text": "prueba",
+    "isUser": true,
+    "ts": "2026-01-25T22:05:12.165Z"
+  },
+  {
+    "sessionId": "f5e6b122-f551-460f-840d-4b7a033dd99e",
+    "text": "prueba",
+    "isUser": true,
+    "ts": "2026-01-25T22:07:03.739Z"
+  },
+  {
+    "sessionId": "f5e6b122-f551-460f-840d-4b7a033dd99e",
+    "text": "prueba",
+    "isUser": true,
+    "ts": "2026-01-25T22:17:56.178Z"
+  },
+  {
+    "sessionId": "cb5a1df4-5a3e-4c97-b1d5-ae5d9e200f99",
+    "text": "test",
+    "isUser": true,
+    "ts": "2026-01-26T03:22:07.095Z"
+  },
+  {
+    "sessionId": "b2b4c46b-a18c-4902-ae94-92140fadd77f",
+    "text": "Hola",
+    "isUser": true,
+    "ts": "2026-01-26T05:27:14.956Z"
+  },
+  {
+    "sessionId": "1162f980-d90a-45c1-97ec-c3100c2c23ce",
+    "text": "test",
+    "isUser": true,
+    "ts": "2026-01-27T04:12:02.933Z"
+  },
+  {
+    "sessionId": "1162f980-d90a-45c1-97ec-c3100c2c23ce",
+    "text": "test",
+    "isUser": true,
+    "ts": "2026-01-27T04:12:45.532Z"
+  },
+  {
+    "sessionId": "1162f980-d90a-45c1-97ec-c3100c2c23ce",
+    "text": "test",
+    "isUser": true,
+    "ts": "2026-01-27T04:12:52.332Z"
+  },
+  {
+    "sessionId": "1162f980-d90a-45c1-97ec-c3100c2c23ce",
+    "text": "Hola",
+    "isUser": true,
+    "ts": "2026-01-27T04:13:13.987Z"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "55d156c6-07da-494f-bf93-5821a01ec5c7",
+    "ownerId": "e4e2a813-65c0-4c89-a77e-86bca8d7d007",
+    "title": "Prueba",
+    "content": "Prueba 2",
+    "status": "published",
+    "publishAt": null,
+    "ts": "2026-01-27T04:18:00.743Z"
+  },
+  {
+    "id": "f6015db3-5acc-44b7-94ed-a95489ec4157",
+    "ownerId": "e4e2a813-65c0-4c89-a77e-86bca8d7d007",
+    "title": "test2",
+    "content": "test2",
+    "status": "published",
+    "publishAt": null,
+    "ts": "2026-01-27T05:00:55.181Z"
+  },
+  {
+    "id": "94f76218-1cfb-45ed-914c-359cfcfc1b13",
+    "ownerId": "e4e2a813-65c0-4c89-a77e-86bca8d7d007",
+    "title": "Test 3",
+    "content": "Test 3",
+    "status": "published",
+    "publishAt": "2026-01-27T02:54",
+    "ts": "2026-01-27T08:54:32.278Z"
+  }
+]
