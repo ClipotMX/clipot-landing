@@ -33,18 +33,7 @@ const services = [
     description: "Tiendas online que venden. Desde el setup inicial hasta la optimización continua de tu catálogo y proceso de compra.",
     features: ["Shopify", "WooCommerce", "Optimización checkout", "Catálogo", "Pasarelas de pago", "Logística"],
   },
-  {
-    icon: Users,
-    title: "Community Management",
-    description: "Gestión profesional de tus redes sociales. Construimos comunidad, respondemos comentarios y generamos engagement.",
-    features: ["Instagram", "Facebook", "TikTok", "LinkedIn", "Moderación", "Reportes mensuales"],
-  },
-  {
-    icon: Video,
-    title: "Content Creation",
-    description: "Contenido que engancha y convierte. Fotografía de producto, video para redes y copywriting estratégico.",
-    features: ["Fotografía", "Video", "Reels", "Copywriting", "Guiones", "Edición"],
-  },
+
   {
     icon: Sparkles,
     title: "UGC Campaigns",
