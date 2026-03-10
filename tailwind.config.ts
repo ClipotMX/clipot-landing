@@ -14,10 +14,19 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Rubik", "system-ui", "sans-serif"],
+        sans: ["DM Sans", "system-ui", "sans-serif"],
+        display: ["DM Sans", "system-ui", "sans-serif"],
       },
       colors: {
+        brand: {
+          bg: "rgb(var(--color-bg-rgb) / <alpha-value>)",
+          surface: "rgb(var(--color-surface-rgb) / <alpha-value>)",
+          border: "rgb(var(--color-border-rgb) / <alpha-value>)",
+          text: "rgb(var(--color-text-rgb) / <alpha-value>)",
+          muted: "rgb(var(--color-text-muted-rgb) / <alpha-value>)",
+          primary: "rgb(var(--color-primary-rgb) / <alpha-value>)",
+          secondary: "rgb(var(--color-secondary-rgb) / <alpha-value>)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -74,6 +83,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "accent-gradient": "linear-gradient(135deg, #6B4EFF, #4F8EF7)",
       },
       keyframes: {
         "accordion-down": {

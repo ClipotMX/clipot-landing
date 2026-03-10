@@ -26,6 +26,8 @@ import { ProtectedUserRoute, ProtectedAdminRoute } from "./components/ProtectedR
 import AdminRoles from "./pages/AdminRoles";
 import AdminPostEditor from "./pages/AdminPostEditor";
 import AdminTaxonomies from "./pages/AdminTaxonomies";
+import LandingPage from "./pages/LandingPage";
+import Layout from "./layout";
 
 const queryClient = new QueryClient();
 
@@ -36,7 +38,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Layout><LandingPage /></Layout>} />
+          <Route path="/old-index" element={<Index />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/servicios/:slug" element={<ServicioDetalle />} />
