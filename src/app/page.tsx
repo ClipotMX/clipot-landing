@@ -7,7 +7,7 @@ import ParaQuien from "@/components/ParaQuien";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
 
-const LandingPage = () => {
+const Page = () => {
   return (
     <div className="bg-brand-bg min-h-screen text-brand-text overflow-x-hidden">
       <Hero />
@@ -22,4 +22,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Page;

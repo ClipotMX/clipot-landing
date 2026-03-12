@@ -10,7 +10,7 @@ const Navbar = () => {
     () => [
       { label: "Inicio", href: "#hero" },
       { label: "Cómo funciona", href: "#como-funciona" },
-      { label: "Planes", href: "#planes" },
+      { label: "Soluciones", href: "#soluciones" },
       { label: "Contacto", href: "#contacto" },
     ],
     [],
@@ -47,24 +47,6 @@ const Navbar = () => {
     >
       <div className="container mx-auto max-w-6xl h-full px-4 md:px-8 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg">
-          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" className="shrink-0">
-            <defs>
-              <linearGradient id="clipotNavLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#6B4EFF" />
-                <stop offset="100%" stopColor="#4F8EF7" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M20 12a7.5 7.5 0 0 1-7.5 7.5c-1.1 0-2.16-.23-3.12-.66L4 20l1.23-3.96A7.45 7.45 0 0 1 4.5 12 7.5 7.5 0 0 1 12 4.5 7.5 7.5 0 0 1 20 12Z"
-              fill="url(#clipotNavLogoGradient)"
-            />
-            <path
-              d="M8.2 12.1h5.6M8.2 9.7h7.6"
-              stroke="rgba(255,255,255,0.85)"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-            />
-          </svg>
           <span className="text-lg font-bold tracking-tight bg-accent-gradient bg-clip-text text-transparent">
             Clipot
           </span>
