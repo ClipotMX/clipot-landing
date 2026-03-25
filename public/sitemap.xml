@@ -1,30 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:8080/</loc>
+    <loc>https://clipot.com/</loc>
   </url>
   <url>
-    <loc>http://localhost:8080/nosotros</loc>
+    <loc>https://clipot.com/nosotros</loc>
   </url>
   <url>
-    <loc>http://localhost:8080/servicios</loc>
+    <loc>https://clipot.com/servicios</loc>
   </url>
   <url>
-    <loc>http://localhost:8080/portfolio</loc>
+    <loc>https://clipot.com/portfolio</loc>
   </url>
   <url>
-    <loc>http://localhost:8080/kommo</loc>
+    <loc>https://clipot.com/kommo</loc>
   </url>
   <url>
-    <loc>http://localhost:8080/blog</loc>
+    <loc>https://clipot.com/blog</loc>
   </url>
   <url>
-    <loc>http://localhost:8080/contacto</loc>
+    <loc>https://clipot.com/servicios/paid-media</loc>
   </url>
   <url>
-    <loc>http://localhost:8080/privacidad</loc>
+    <loc>https://clipot.com/servicios/diseno-digital</loc>
   </url>
   <url>
-    <loc>http://localhost:8080/terminos</loc>
+    <loc>https://clipot.com/servicios/desarrollo-web</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/servicios/ecommerce</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/servicios/community-management</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/servicios/content-creation</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/servicios/ugc-campaigns</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/contacto</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/privacidad</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/terminos</loc>
   </url>
 </urlset>

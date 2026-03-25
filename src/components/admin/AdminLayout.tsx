@@ -18,8 +18,8 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   const [role, setRole] = useState<string>("");
   const location = useLocation();
   const navigate = useNavigate();
-  const supabaseUrl = (import.meta as any).env?.VITE_SUPABASE_URL;
-  const supabaseAnon = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY;
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+  const supabaseAnon = import.meta.env.VITE_SUPABASE_ANON_KEY;
   const supabase = (supabaseUrl && supabaseAnon) ? createClient(supabaseUrl, supabaseAnon) : null;
 
   useEffect(() => {
@@ -35,11 +35,17 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   }, []);
 
   async function logout() {
-    try { if (supabase) await supabase.auth.signOut(); } catch {}
+    try {
+      if (supabase) await supabase.auth.signOut();
+    } catch {
+      void 0;
+    }
     try {
       localStorage.removeItem("userToken");
       localStorage.removeItem("adminToken");
-    } catch {}
+    } catch {
+      void 0;
+    }
     navigate("/admin/login");
   }
 

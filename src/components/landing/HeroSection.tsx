@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import CalBookingModal from "@/components/CalBookingModal";
 
 const HeroSection = () => {
   return (
@@ -45,14 +46,12 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
           >
-            <a 
-              href="https://calendly.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <CalBookingModal
               className="inline-flex items-center justify-center px-8 py-4 bg-accent-gradient text-white font-semibold rounded-lg transition-all duration-200 text-lg shadow-[0_0_24px_rgba(107,78,255,0.25)] hover:shadow-[0_0_36px_rgba(107,78,255,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg"
+              title="Agendar diagnóstico (30 min)"
             >
               Agendar diagnóstico gratuito
-            </a>
+            </CalBookingModal>
             <a 
               href="#como-funciona" 
               className="inline-flex items-center justify-center px-8 py-4 bg-brand-surface hover:bg-brand-surface/80 text-brand-text font-semibold rounded-lg transition-all duration-200 text-lg border border-brand-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg"

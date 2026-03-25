@@ -14,8 +14,8 @@ export default function MediaModal({ open, onClose, onSelect }: Props) {
   const [q, setQ] = useState("");
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(false);
-  const url = (import.meta as any).env?.VITE_SUPABASE_URL;
-  const anon = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY;
+  const url = import.meta.env.VITE_SUPABASE_URL;
+  const anon = import.meta.env.VITE_SUPABASE_ANON_KEY;
   const supabase = (url && anon) ? createClient(url, anon) : null;
 
   async function load() {

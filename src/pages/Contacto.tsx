@@ -80,9 +80,17 @@ const Contacto = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Contacto | Agencia de marketing digital – Clipot"
-        description="¿Buscas una agencia de marketing digital? Contáctanos para diseñar una estrategia de generación y gestión de leads a medida."
-        keywords={["contacto agencia marketing digital","generación de leads","gestión de leads"]}
+        title="Contacto | Agencia de marketing digital en CDMX – Clipot"
+        description="Contacto con Clipot, agencia de marketing digital en Ciudad de México (CDMX). Agenda una llamada y recibe una propuesta de generación y gestión de leads para tu negocio en México."
+        keywords={[
+          "contacto agencia de marketing digital cdmx",
+          "agencia de marketing digital ciudad de méxico",
+          "agencia de marketing méxico",
+          "generación de leads cdmx",
+          "agencia de leads cerca de mí",
+          "paid media cdmx",
+          "desarrollo web cdmx",
+        ]}
       />
       <Header />
       

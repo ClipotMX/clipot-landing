@@ -46,9 +46,20 @@ const Servicios = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Servicios de marketing digital | Paid media, desarrollo web, SEO – Clipot"
-        description="Servicios de agencia de marketing digital: paid media, diseño, desarrollo web, ecommerce, community y contenidos. Estrategias enfocadas en conversión."
-        keywords={["servicios marketing digital","paid media","desarrollo web","seo","ecommerce","community management"]}
+        title="Servicios de marketing digital en CDMX | Paid Media y Leads – Clipot"
+        description="Servicios de marketing digital en Ciudad de México (CDMX): paid media, diseño, desarrollo web, ecommerce y contenidos. Estrategias enfocadas en conversión para empresas en México."
+        keywords={[
+          "servicios de marketing digital cdmx",
+          "paid media cdmx",
+          "publicidad en meta ads méxico",
+          "google ads cdmx",
+          "desarrollo web cdmx",
+          "landing pages cdmx",
+          "ecommerce méxico",
+          "agencia de marketing digital en guadalajara",
+          "agencia de marketing digital en monterrey",
+          "servicios de marketing cerca de mí",
+        ]}
       />
       <Header />
       

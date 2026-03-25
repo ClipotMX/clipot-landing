@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import CalBookingModal from "@/components/CalBookingModal";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,9 +48,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto max-w-6xl h-full px-4 md:px-8 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg">
-          <span className="text-lg font-bold tracking-tight bg-accent-gradient bg-clip-text text-transparent">
-            Clipot
-          </span>
+          <img src="/images/clipot_logo_white.png" alt="Clipot" className="h-7 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-brand-muted">
@@ -65,14 +64,12 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <CalBookingModal
             className="inline-flex items-center justify-center h-10 px-4 rounded-lg bg-accent-gradient text-white font-semibold shadow-[0_0_24px_rgba(107,78,255,0.22)] hover:shadow-[0_0_32px_rgba(107,78,255,0.32)] transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg"
+            title="Agendar diagnóstico (30 min)"
           >
             Agendar diagnóstico
-          </a>
+          </CalBookingModal>
         </div>
 
         <button
@@ -108,15 +105,15 @@ const Navbar = () => {
                   {l.label}
                 </a>
               ))}
-              <a
-                href="https://calendly.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-flex items-center justify-center h-11 rounded-lg bg-accent-gradient text-white font-semibold"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Agendar diagnóstico
-              </a>
+              <div className="mt-2">
+                <CalBookingModal
+                  className="inline-flex items-center justify-center h-11 w-full rounded-lg bg-accent-gradient text-white font-semibold"
+                  title="Agendar diagnóstico (30 min)"
+                  onTrigger={() => setIsMenuOpen(false)}
+                >
+                  Agendar diagnóstico
+                </CalBookingModal>
+              </div>
             </div>
           </motion.div>
         ) : null}

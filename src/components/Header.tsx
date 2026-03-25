@@ -29,8 +29,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const [role, setRole] = useState<string>("");
-  const supabaseUrl = (import.meta as any).env?.VITE_SUPABASE_URL;
-  const supabaseAnon = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY;
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+  const supabaseAnon = import.meta.env.VITE_SUPABASE_ANON_KEY;
   const supabase = (supabaseUrl && supabaseAnon) ? createClient(supabaseUrl, supabaseAnon) : null;
   const isAdmin = location.pathname.startsWith("/admin");
 
@@ -52,7 +52,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={clipotLogo} alt="Clipot, agencia de marketing digital" className="h-10 w-auto" />
+            <img src={clipotLogo} alt="Clipot, agencia de marketing digital en Ciudad de México (CDMX)" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -85,11 +85,15 @@ const Header = () => {
                   onClick={async () => {
                     try {
                       if (supabase) await supabase.auth.signOut();
-                    } catch {}
+                    } catch {
+                      void 0;
+                    }
                     try {
                       localStorage.removeItem("userToken");
                       localStorage.removeItem("adminToken");
-                    } catch {}
+                    } catch {
+                      void 0;
+                    }
                     window.location.href = "/admin/login";
                   }}
                 >

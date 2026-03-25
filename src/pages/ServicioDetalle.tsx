@@ -28,11 +28,17 @@ const ServicioDetalle = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title={`${service.title} | Agencia de marketing digital – Clipot`}
+        title={`${service.title} en CDMX | Agencia de marketing digital – Clipot`}
         description={service.description}
-        keywords={[service.title,"servicios de marketing digital","generación de leads"]}
+        keywords={[
+          service.title,
+          "servicios de marketing digital cdmx",
+          "agencia de marketing digital ciudad de méxico",
+          "generación de leads cdmx",
+          "paid media méxico",
+        ]}
         type="article"
-        canonical={typeof window !== "undefined" ? `${window.location.origin}/servicios/${service.slug}` : undefined}
+        canonical={`/servicios/${service.slug}`}
       />
       <Header />
 

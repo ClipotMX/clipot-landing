@@ -9,14 +9,28 @@ import SEO from "@/components/SEO";
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 
+type BlogPostData = {
+  title: string;
+  slug: string;
+  excerpt: string;
+  category?: string;
+  author?: string;
+  image?: string;
+  content?: string;
+  ts?: string;
+  publish_at?: string;
+  read_time?: string;
+  readTime?: string;
+};
+
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [post, setPost] = useState<any>(null);
+  const [post, setPost] = useState<BlogPostData | null>(null);
   useEffect(() => {
     (async () => {
       try {
-        const url = (import.meta as any).env?.VITE_SUPABASE_URL;
-        const anon = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY;
+        const url = import.meta.env.VITE_SUPABASE_URL;
+        const anon = import.meta.env.VITE_SUPABASE_ANON_KEY;
         if (url && anon) {
           const supabase = createClient(url, anon);
           const { data, error } = await supabase
@@ -27,14 +41,16 @@ const BlogPost = () => {
             .limit(1)
             .maybeSingle();
           if (!error && data) {
-            setPost(data);
+            setPost(data as BlogPostData);
             return;
           }
         }
         const res = await fetch(`http://localhost:3001/api/public/posts/${slug}`);
         const json = await res.json();
-        if (json?.ok) setPost(json.item);
-      } catch {}
+        if (json?.ok) setPost(json.item as BlogPostData);
+      } catch {
+        setPost(null);
+      }
     })();
   }, [slug]);
 
@@ -42,16 +58,23 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />;
   }
 
-  const relatedPosts: any[] = [];
+  const relatedPosts: Array<Pick<BlogPostData, "slug" | "title" | "category" | "image">> = [];
 
   return (
     <div className="min-h-screen">
       <SEO
-        title={`${post.title} | Blog de marketing digital – Clipot`}
+        title={`${post.title} | Blog de marketing digital en México – Clipot`}
         description={post.excerpt}
-        keywords={[post.category,"blog marketing digital","leads","paid media","CRM"]}
+        keywords={[
+          post.category || "Marketing digital",
+          "blog marketing digital méxico",
+          "marketing digital cdmx",
+          "generación de leads méxico",
+          "paid media méxico",
+          "crm ventas méxico",
+        ]}
         type="article"
-        canonical={typeof window !== "undefined" ? `${window.location.origin}/blog/${post.slug}` : undefined}
+        canonical={`/blog/${post.slug}`}
       />
       <Header />
 

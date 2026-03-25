@@ -57,9 +57,17 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Portfolio de marketing digital | Casos de éxito – Clipot"
-        description="Casos de éxito en marketing digital: leads calificados, ventas y crecimiento real en múltiples industrias."
-        keywords={["portfolio marketing digital","casos de éxito","leads calificados","ventas"]}
+        title="Casos de éxito en marketing digital en México | CDMX – Clipot"
+        description="Casos de éxito en marketing digital en México: generación de leads calificados, ventas y crecimiento real. Proyectos en CDMX y campañas para empresas en todo México."
+        keywords={[
+          "casos de éxito marketing digital méxico",
+          "portfolio marketing digital cdmx",
+          "generación de leads cdmx",
+          "paid media méxico",
+          "meta ads méxico casos de éxito",
+          "google ads cdmx casos de éxito",
+          "agencia de marketing digital ciudad de méxico",
+        ]}
       />
       <Header />
       

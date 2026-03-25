@@ -28,9 +28,18 @@ const Nosotros = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Agencia de marketing digital especializada en leads | Clipot"
-        description="Conoce a Clipot: especialistas en generación y gestión de leads. Transparencia, velocidad y resultados para tu negocio."
-        keywords={["agencia marketing digital","generación de leads","gestión de leads","transparencia","resultados"]}
+        title="Agencia de marketing digital en CDMX | Sobre Clipot"
+        description="Conoce a Clipot, agencia de marketing digital en Ciudad de México (CDMX). Especialistas en generación y gestión de leads con foco en resultados para empresas en México."
+        keywords={[
+          "agencia de marketing digital en cdmx",
+          "agencia de marketing digital ciudad de méxico",
+          "agencia de leads cdmx",
+          "generación de leads méxico",
+          "gestión de leads cdmx",
+          "performance marketing méxico",
+          "marketing para pymes cdmx",
+          "agencia de marketing cerca de mí",
+        ]}
       />
       <Header />
       

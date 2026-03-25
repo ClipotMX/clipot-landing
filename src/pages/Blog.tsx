@@ -15,8 +15,8 @@ const Blog = () => {
   useEffect(() => {
     (async () => {
       try {
-        const url = (import.meta as any).env?.VITE_SUPABASE_URL;
-        const anon = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY;
+        const url = import.meta.env.VITE_SUPABASE_URL;
+        const anon = import.meta.env.VITE_SUPABASE_ANON_KEY;
         if (url && anon) {
           const supabase = createClient(url, anon);
           const { data, error } = await supabase
@@ -26,7 +26,7 @@ const Blog = () => {
             .lte("publish_at", new Date().toISOString() || new Date(0).toISOString());
           if (!error && data) {
             setPosts(
-              data.map((p: any) => ({
+              data.map((p: { title: string; slug: string; image?: string; category?: string; read_time?: string; content?: string }) => ({
                 title: p.title,
                 slug: p.slug,
                 image: p.image,
@@ -41,15 +41,26 @@ const Blog = () => {
         const res = await fetch("http://localhost:3001/api/public/posts");
         const json = await res.json();
         if (json?.ok) setPosts(json.items || []);
-      } catch {}
+      } catch {
+        setPosts([]);
+      }
     })();
   }, []);
   return (
     <div className="min-h-screen">
       <SEO
-        title="Blog de marketing digital | Leads, paid media y CRM – Clipot"
-        description="Consejos prácticos de marketing digital: generación y gestión de leads, paid media, automatización y CRM."
-        keywords={["blog marketing digital","leads","paid media","CRM","automatización"]}
+        title="Blog de marketing digital en México | CDMX – Clipot"
+        description="Blog de marketing digital para México: generación y gestión de leads, paid media, automatización y CRM. Enfoque práctico para equipos comerciales en CDMX y todo México."
+        keywords={[
+          "blog marketing digital méxico",
+          "marketing digital cdmx",
+          "generación de leads méxico",
+          "paid media méxico",
+          "automatización de marketing méxico",
+          "crm ventas méxico",
+          "estrategia de leads cdmx",
+          "marketing digital cerca de mí",
+        ]}
       />
       <Header />
       

@@ -29,8 +29,8 @@ const AdminPostEditor = () => {
   const [loading, setLoading] = useState(false);
   const [galleryOpen, setGalleryOpen] = useState(false);
 
-  const supabaseUrl = (import.meta as any).env?.VITE_SUPABASE_URL;
-  const supabaseAnon = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY;
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+  const supabaseAnon = import.meta.env.VITE_SUPABASE_ANON_KEY;
   const supabase = (supabaseUrl && supabaseAnon) ? createClient(supabaseUrl, supabaseAnon) : null;
 
   async function load() {

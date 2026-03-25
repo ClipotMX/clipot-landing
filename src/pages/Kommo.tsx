@@ -43,9 +43,18 @@ const Kommo = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Implementación Kommo CRM | Agencia de marketing digital – Clipot"
-        description="Implementamos Kommo CRM para centralizar tus canales, automatizar y gestionar leads. Partners oficiales para integraciones y soporte."
-        keywords={["Kommo CRM","implementación CRM","agencia marketing digital","gestión de leads"]}
+        title="Implementación Kommo CRM en México | CDMX – Clipot"
+        description="Implementación de Kommo CRM en México (CDMX): centraliza canales, automatiza calificación y gestiona leads. Partners oficiales con integraciones y soporte."
+        keywords={[
+          "implementación kommo crm méxico",
+          "kommo crm cdmx",
+          "implementación crm cdmx",
+          "automatización de leads méxico",
+          "gestión de leads cdmx",
+          "crm para ventas méxico",
+          "integración whatsapp crm méxico",
+          "partners kommo méxico",
+        ]}
       />
       <Header />
       

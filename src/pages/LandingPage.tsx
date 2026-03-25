@@ -6,6 +6,8 @@ import Soluciones from "@/components/Soluciones";
 import ParaQuien from "@/components/ParaQuien";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import ClientsCarouselSection from "@/components/ClientsCarouselSection";
 
 const LandingPage = () => {
   return (
@@ -16,6 +18,8 @@ const LandingPage = () => {
       <ComoFunciona />
       <Soluciones />
       <ParaQuien />
+      <ClientsCarouselSection />
+      <TestimonialsSection />
       <CTAFinal />
       <Footer />
     </div>

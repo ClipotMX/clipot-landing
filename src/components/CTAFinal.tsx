@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import CalBookingModal from "@/components/CalBookingModal";
 
 const CTAFinal = () => {
   return (
@@ -35,14 +36,12 @@ const CTAFinal = () => {
               transition={{ duration: 0.45, delay: 0.12 }}
               className="mt-10 flex flex-col items-center gap-6"
             >
-              <a
-                href="https://calendly.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalBookingModal
                 className="inline-flex items-center justify-center px-10 py-5 rounded-lg bg-accent-gradient text-white font-semibold text-lg shadow-[0_0_34px_rgba(107,78,255,0.22)] hover:shadow-[0_0_44px_rgba(107,78,255,0.32)] transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg"
+                title="Agendar diagnóstico (30 min)"
               >
                 Agendar diagnóstico gratis
-              </a>
+              </CalBookingModal>
 
               <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-brand-muted">
                 <div className="flex items-center gap-2">

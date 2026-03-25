@@ -15,6 +15,8 @@ const NotFound = () => {
         title="404 – Página no encontrada | Clipot"
         description="La página solicitada no existe. Vuelve al inicio o navega por nuestras secciones."
         keywords={["404","página no encontrada","Clipot"]}
+        noIndex
+        noFollow
       />
       <div className="text-center">
         <h1 className="mb-4 text-4xl font-bold">404</h1>

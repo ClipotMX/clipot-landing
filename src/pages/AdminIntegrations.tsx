@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const AdminIntegrations = () => {
   const token = localStorage.getItem("userToken") || "";
-  const [credentials, setCredentials] = useState<any>({});
+  const [credentials, setCredentials] = useState<Record<string, string>>({});
 
   async function load() {
     const res = await fetch("http://localhost:3001/api/integrations/credentials", {

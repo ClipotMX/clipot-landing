@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import CalBookingModal from "@/components/CalBookingModal";
 
 const plans = [
   {
@@ -103,14 +104,12 @@ const PricingSection = () => {
                 ))}
               </ul>
 
-              <a 
-                href="https://calendly.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <CalBookingModal
                 className="w-full py-4 rounded-lg font-semibold text-center text-white bg-accent-gradient transition-transform duration-200 hover:scale-[1.01] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-primary"
+                title="Agendar diagnóstico (30 min)"
               >
                 Agendar diagnóstico
-              </a>
+              </CalBookingModal>
             </motion.div>
           ))}
         </div>

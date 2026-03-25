@@ -29,8 +29,8 @@ const AdminCMS = () => {
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string>("");
   const [progress, setProgress] = useState<number>(0);
-  const supabaseUrl = (import.meta as any).env?.VITE_SUPABASE_URL;
-  const supabaseAnon = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY;
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+  const supabaseAnon = import.meta.env.VITE_SUPABASE_ANON_KEY;
   const supabase = (supabaseUrl && supabaseAnon) ? createClient(supabaseUrl, supabaseAnon) : null;
 
   async function load() {

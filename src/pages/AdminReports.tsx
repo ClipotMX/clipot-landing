@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
+type Metric = { name: string; value: number | string };
+type MetricsResponse = { metrics: Metric[] };
+
 const AdminReports = () => {
   const token = localStorage.getItem("userToken") || "";
-  const [ga, setGa] = useState<any>({ metrics: [] });
-  const [meta, setMeta] = useState<any>({ metrics: [] });
+  const [ga, setGa] = useState<MetricsResponse>({ metrics: [] });
+  const [meta, setMeta] = useState<MetricsResponse>({ metrics: [] });
 
   async function load() {
     const a = await fetch("http://localhost:3001/api/integrations/google-analytics", { headers: { Authorization: `Bearer ${token}` } }).then(r => r.json());
@@ -16,7 +19,7 @@ const AdminReports = () => {
   }
 
   function exportCSV() {
-    const rows = [["metric", "value"], ...[...ga.metrics, ...meta.metrics].map((x: any) => [x.name, x.value])];
+    const rows = [["metric", "value"], ...[...ga.metrics, ...meta.metrics].map((x) => [x.name, x.value])];
     const csv = rows.map(r => r.join(",")).join("\n");
     const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
@@ -29,7 +32,7 @@ const AdminReports = () => {
 
   useEffect(() => { if (token) load(); }, []);
 
-  const data = ga.metrics.map((m: any, i: number) => ({ name: m.name, value: m.value })) || [];
+  const data = ga.metrics.map((m) => ({ name: m.name, value: m.value })) || [];
 
   return (
     <AdminLayout>
