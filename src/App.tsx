@@ -28,6 +28,11 @@ import AdminPostEditor from "./pages/AdminPostEditor";
 import AdminTaxonomies from "./pages/AdminTaxonomies";
 import LandingPage from "./pages/LandingPage";
 import Layout from "./layout";
+import LandingKommo from "./pages/landings/LandingKommo";
+import LandingBolten from "./pages/landings/LandingBolten";
+import LandingPulposPOS from "./pages/landings/LandingPulposPOS";
+import LandingShopify from "./pages/landings/LandingShopify";
+import LandingMercadoPagoTerminal from "./pages/landings/LandingMercadoPagoTerminal";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +44,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout><LandingPage /></Layout>} />
+          <Route path="/landing/kommo" element={<Layout><LandingKommo /></Layout>} />
+          <Route path="/landing/bolten" element={<Layout><LandingBolten /></Layout>} />
+          <Route path="/landing/pulpos-pos" element={<Layout><LandingPulposPOS /></Layout>} />
+          <Route path="/landing/shopify" element={<Layout><LandingShopify /></Layout>} />
+          <Route path="/landing/terminal-mercado-pago" element={<Layout><LandingMercadoPagoTerminal /></Layout>} />
           <Route path="/old-index" element={<Index />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/servicios" element={<Servicios />} />
