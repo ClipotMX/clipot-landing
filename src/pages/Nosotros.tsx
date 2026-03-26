@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import CTA from "@/components/CTA";
@@ -28,21 +27,16 @@ const Nosotros = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Agencia de marketing digital en CDMX | Sobre Clipot"
-        description="Conoce a Clipot, agencia de marketing digital en Ciudad de México (CDMX). Especialistas en generación y gestión de leads con foco en resultados para empresas en México."
+        title="Sobre Clipot | Sede en Guadalajara, Jalisco – Atendemos todo México"
+        description="Clipot tiene su sede en Guadalajara, Jalisco. Atendemos a todo México y proyectamos expansión a Latinoamérica y España. Actualmente nos enfocamos exclusivamente en México por estar en etapa de inicio."
         keywords={[
-          "agencia de marketing digital en cdmx",
-          "agencia de marketing digital ciudad de méxico",
-          "agencia de leads cdmx",
-          "generación de leads méxico",
-          "gestión de leads cdmx",
-          "performance marketing méxico",
-          "marketing para pymes cdmx",
-          "agencia de marketing cerca de mí",
+          "clipot guadalajara",
+          "agencia en jalisco",
+          "servicios empresariales méxico",
+          "business os méxico",
+          "ecosistema empresarial",
         ]}
       />
-      <Header />
-      
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background">
         <div className="container mx-auto px-4">
@@ -58,8 +52,8 @@ const Nosotros = () => {
               <span className="text-primary">solo hacemos eso</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Trabajamos con equipos de ventas y dirección para reducir CAC y acelerar el cierre. 
-              Generamos oportunidades y gestionamos el flujo para maximizar ingresos.
+              Sede en Guadalajara, Jalisco. Atendemos todo México y proyectamos expansión futura a Latinoamérica y España. 
+              Hoy nos enfocamos en el mercado mexicano para consolidar un ecosistema empresarial (Business OS) claro, ordenado y funcional.
             </p>
           </motion.div>
         </div>
@@ -79,21 +73,15 @@ const Nosotros = () => {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Empezamos como muchos: frustrados. Veíamos cómo agencias prometían 
-                  resultados increíbles y entregaban reportes llenos de métricas 
-                  que no significaban nada para el negocio.
+                  Nacimos en Guadalajara con una idea simple: el negocio crece cuando el sistema funciona.
+                  Menos ruido, más orden operativo. Menos silos, más visibilidad.
                 </p>
                 <p>
-                  Leads sin responder. Oportunidades perdidas. Inversión desperdiciada.
-                </p>
-                <p>
-                  Decidimos hacer las cosas diferente. No solo generamos leads, 
-                  los gestionamos. Porque de nada sirve tener 100 leads si no 
-                  puedes atenderlos a tiempo.
+                  Business OS es nuestra forma de integrar clientes, ventas, pagos, operación y reportes para que todo trabaje en conjunto.
+                  Primero México; después Latinoamérica y España.
                 </p>
                 <p className="font-semibold text-foreground">
-                  Hoy, más de 150 empresas confían en nosotros para hacer crecer 
-                  sus ventas. Y seguimos creciendo.
+                  Trabajamos con equipos de dirección y operación para construir ecosistemas que sostienen el crecimiento.
                 </p>
               </div>
             </motion.div>

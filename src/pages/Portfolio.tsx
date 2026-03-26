@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import CTA from "@/components/CTA";
@@ -69,8 +68,6 @@ const Portfolio = () => {
           "agencia de marketing digital ciudad de méxico",
         ]}
       />
-      <Header />
-      
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background">
         <div className="container mx-auto px-4">

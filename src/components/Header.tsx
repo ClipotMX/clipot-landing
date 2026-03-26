@@ -52,7 +52,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={clipotLogo} alt="Clipot, agencia de marketing digital en Ciudad de México (CDMX)" className="h-10 w-auto" />
+            <img src={clipotLogo} alt="Clipot, agencia de marketing digital con sede en Guadalajara (Jalisco), México" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

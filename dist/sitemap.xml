@@ -13,10 +13,22 @@
     <loc>https://clipot.com/portfolio</loc>
   </url>
   <url>
-    <loc>https://clipot.com/kommo</loc>
+    <!-- removed kommo -->
   </url>
   <url>
     <loc>https://clipot.com/blog</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/servicios/business-os-lite</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/servicios/business-os-advance</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/servicios/business-os-pro</loc>
+  </url>
+  <url>
+    <loc>https://clipot.com/servicios/business-os-high</loc>
   </url>
   <url>
     <loc>https://clipot.com/servicios/paid-media</loc>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { motion } from "framer-motion";
@@ -80,20 +79,16 @@ const Contacto = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Contacto | Agencia de marketing digital en CDMX – Clipot"
-        description="Contacto con Clipot, agencia de marketing digital en Ciudad de México (CDMX). Agenda una llamada y recibe una propuesta de generación y gestión de leads para tu negocio en México."
+        title="Contacto | Clipot – Sede en Guadalajara, Jalisco"
+        description="Contáctanos. Sede en Guadalajara (Jalisco). Atendemos todo México. Agenda una llamada y recibe una propuesta para implementar Business OS en tu empresa."
         keywords={[
-          "contacto agencia de marketing digital cdmx",
-          "agencia de marketing digital ciudad de méxico",
-          "agencia de marketing méxico",
-          "generación de leads cdmx",
-          "agencia de leads cerca de mí",
-          "paid media cdmx",
-          "desarrollo web cdmx",
+          "clipot guadalajara",
+          "contacto empresa jalisco",
+          "business os méxico",
+          "ecosistema empresarial",
+          "gestión operativa méxico",
         ]}
       />
-      <Header />
-      
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background">
         <div className="container mx-auto px-4">

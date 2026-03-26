@@ -1,44 +1,36 @@
 import { Link } from "react-router-dom";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import CTA from "@/components/CTA";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Target, Palette, Globe, ShoppingCart, Users, Video, Sparkles, CheckCircle } from "lucide-react";
+import { ArrowRight, Boxes, Layers, Cog, Building2, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
 
 const services = [
   {
-    icon: Target,
-    title: "Paid Media",
-    description: "Campañas de publicidad digital en Meta, Google, TikTok y LinkedIn. Optimizadas para generar leads de calidad, no solo clics.",
-    features: ["Meta Ads", "Google Ads", "TikTok Ads", "LinkedIn Ads", "Remarketing", "A/B Testing"],
+    icon: Boxes,
+    title: "Business OS Lite",
+    description: "Ecosistema básico de gestión empresarial para emprendedores y microempresas. Enfoque en orden operativo sin complejidad.",
+    features: ["Clientes y contactos", "Agenda y recordatorios", "Tareas y seguimiento", "Tablero básico de métricas"],
   },
   {
-    icon: Palette,
-    title: "Diseño Digital",
-    description: "Creativos que convierten. Desde banners hasta landing pages, todo diseñado para captar atención y generar acción.",
-    features: ["Diseño de anuncios", "Landing pages", "Branding digital", "Motion graphics", "UX/UI", "Presentaciones"],
+    icon: Layers,
+    title: "Business OS Advance",
+    description: "Herramientas intermedias de productividad y automatización para pymes que buscan eficiencia y consistencia.",
+    features: ["Pipelines por área", "Automatización de seguimiento", "Plantillas operativas", "Reportes ejecutivos"],
   },
   {
-    icon: Globe,
-    title: "Desarrollo Web",
-    description: "Sitios web optimizados para conversión. Rápidos, responsivos y diseñados para guiar al usuario hacia la acción.",
-    features: ["Sitios corporativos", "Landing pages", "Optimización SEO", "Velocidad", "Analytics", "Integraciones"],
+    icon: Cog,
+    title: "Business OS Pro",
+    description: "Integraciones avanzadas y análisis empresarial para compañías en crecimiento que requieren visibilidad y control.",
+    features: ["Integraciones externas", "Analítica avanzada", "Procesos documentados", "KPIs de desempeño"],
   },
   {
-    icon: ShoppingCart,
-    title: "Ecommerce",
-    description: "Tiendas online que venden. Desde el setup inicial hasta la optimización continua de tu catálogo y proceso de compra.",
-    features: ["Shopify", "WooCommerce", "Optimización checkout", "Catálogo", "Pasarelas de pago", "Logística"],
-  },
-
-  {
-    icon: Sparkles,
-    title: "UGC Campaigns",
-    description: "Contenido generado por usuarios reales. Auténtico, creíble y con alto engagement para tus campañas.",
-    features: ["Red de creadores", "Brief creativo", "Producción", "Derechos de uso", "Optimización", "Reportes"],
+    icon: Building2,
+    title: "Business OS High",
+    description: "Ecosistema completo y personalizable para corporativos con operación compleja y necesidad de gobierno de procesos.",
+    features: ["Arquitectura modular", "Permisos y roles granulares", "Data Warehouse", "Reportes financieros y operativos"],
   },
 ];
 
@@ -46,23 +38,16 @@ const Servicios = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Servicios de marketing digital en CDMX | Paid Media y Leads – Clipot"
-        description="Servicios de marketing digital en Ciudad de México (CDMX): paid media, diseño, desarrollo web, ecommerce y contenidos. Estrategias enfocadas en conversión para empresas en México."
+        title="Servicios Business OS en México – Clipot"
+        description="Planes de Business OS para distintos tamaños de empresa: Lite, Advance, Pro y High. Sede en Guadalajara, Jalisco; atendemos todo México."
         keywords={[
-          "servicios de marketing digital cdmx",
-          "paid media cdmx",
-          "publicidad en meta ads méxico",
-          "google ads cdmx",
-          "desarrollo web cdmx",
-          "landing pages cdmx",
-          "ecommerce méxico",
-          "agencia de marketing digital en guadalajara",
-          "agencia de marketing digital en monterrey",
-          "servicios de marketing cerca de mí",
+          "business os méxico",
+          "ecosistema empresarial méxico",
+          "sistema operativo de negocio",
+          "gestión empresarial guadalajara",
+          "automatización pymes méxico",
         ]}
       />
-      <Header />
-      
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background">
         <div className="container mx-auto px-4">
@@ -78,8 +63,7 @@ const Servicios = () => {
               <span className="text-primary">funcionan</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Diseñamos estrategias a medida para decisores de negocio: 
-              objetivos claros, métricas accionables y retorno demostrable.
+              Ecosistemas de negocio diseñados para distintos tipos de empresa. Sede en Guadalajara, Jalisco; atendemos todo México.
             </p>
           </motion.div>
         </div>

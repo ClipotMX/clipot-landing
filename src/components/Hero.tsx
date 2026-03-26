@@ -37,7 +37,7 @@ const Hero = () => {
           >
             Implementamos el sistema que conecta tus clientes, ventas, pagos y operaciones — para que tu negocio funcione sin depender de
             que alguien esté encima de todo.
-            <span className="block mt-3">Atendemos en Ciudad de México (CDMX) y en todo México.</span>
+            <span className="block mt-3">Sede en Guadalajara (Jalisco). Atendemos todo México.</span>
           </motion.p>
 
           <motion.div

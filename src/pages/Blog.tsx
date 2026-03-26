@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { motion } from "framer-motion";
@@ -49,21 +48,17 @@ const Blog = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Blog de marketing digital en México | CDMX – Clipot"
-        description="Blog de marketing digital para México: generación y gestión de leads, paid media, automatización y CRM. Enfoque práctico para equipos comerciales en CDMX y todo México."
+        title="Blog de marketing digital en México – Clipot"
+        description="Blog de marketing digital para México: generación y gestión de leads, paid media, automatización y CRM. Enfoque práctico para equipos comerciales en todo México."
         keywords={[
           "blog marketing digital méxico",
-          "marketing digital cdmx",
           "generación de leads méxico",
           "paid media méxico",
           "automatización de marketing méxico",
           "crm ventas méxico",
-          "estrategia de leads cdmx",
           "marketing digital cerca de mí",
         ]}
       />
-      <Header />
-      
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background">
         <div className="container mx-auto px-4">

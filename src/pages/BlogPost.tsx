@@ -1,5 +1,4 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { motion } from "framer-motion";
@@ -76,8 +75,6 @@ const BlogPost = () => {
         type="article"
         canonical={`/blog/${post.slug}`}
       />
-      <Header />
-
       {/* Hero */}
       <section className="pt-32 pb-12 bg-background">
         <div className="container mx-auto px-4">

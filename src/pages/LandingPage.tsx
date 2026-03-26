@@ -8,6 +8,7 @@ import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ClientsCarouselSection from "@/components/ClientsCarouselSection";
+import PlansShowcase from "@/components/PlansShowcase";
 
 const LandingPage = () => {
   return (
@@ -20,6 +21,7 @@ const LandingPage = () => {
       <ParaQuien />
       <ClientsCarouselSection />
       <TestimonialsSection />
+      <PlansShowcase />
       <CTAFinal />
       <Footer />
     </div>

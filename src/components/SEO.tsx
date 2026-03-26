@@ -141,8 +141,8 @@ export default function SEO({
       email: "hola@clipot.com",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Ciudad de México",
-        addressRegion: "CDMX",
+        addressLocality: "Guadalajara",
+        addressRegion: "Jalisco",
         addressCountry: "MX",
       },
       areaServed: [

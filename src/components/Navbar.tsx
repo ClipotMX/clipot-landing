@@ -12,6 +12,7 @@ const Navbar = () => {
       { label: "Inicio", href: "#hero" },
       { label: "Cómo funciona", href: "#como-funciona" },
       { label: "Soluciones", href: "#soluciones" },
+      { label: "Servicios", href: "/servicios" },
       { label: "Contacto", href: "#contacto" },
     ],
     [],

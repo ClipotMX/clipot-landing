@@ -3,36 +3,21 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+// removed old-index
 import Nosotros from "./pages/Nosotros";
 import Servicios from "./pages/Servicios";
 import ServicioDetalle from "./pages/ServicioDetalle";
 import Portfolio from "./pages/Portfolio";
-import Kommo from "./pages/Kommo";
+// removed kommo
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contacto from "./pages/Contacto";
 import Privacidad from "./pages/Privacidad";
 import Terminos from "./pages/Terminos";
 import NotFound from "./pages/NotFound";
-import OperatorChat from "./pages/OperatorChat";
-import AdminLogin from "./pages/AdminLogin";
-import AdminDashboard from "./pages/AdminDashboard";
-import AdminCMS from "./pages/AdminCMS";
-import AdminEmailEditor from "./pages/AdminEmailEditor";
-import AdminIntegrations from "./pages/AdminIntegrations";
-import AdminReports from "./pages/AdminReports";
-import { ProtectedUserRoute, ProtectedAdminRoute } from "./components/ProtectedRoute";
-import AdminRoles from "./pages/AdminRoles";
-import AdminPostEditor from "./pages/AdminPostEditor";
-import AdminTaxonomies from "./pages/AdminTaxonomies";
 import LandingPage from "./pages/LandingPage";
 import Layout from "./layout";
-import LandingKommo from "./pages/landings/LandingKommo";
-import LandingBolten from "./pages/landings/LandingBolten";
-import LandingPulposPOS from "./pages/landings/LandingPulposPOS";
-import LandingShopify from "./pages/landings/LandingShopify";
-import LandingMercadoPagoTerminal from "./pages/landings/LandingMercadoPagoTerminal";
+// removed landings
 
 const queryClient = new QueryClient();
 
@@ -44,34 +29,17 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout><LandingPage /></Layout>} />
-          <Route path="/landing/kommo" element={<Layout><LandingKommo /></Layout>} />
-          <Route path="/landing/bolten" element={<Layout><LandingBolten /></Layout>} />
-          <Route path="/landing/pulpos-pos" element={<Layout><LandingPulposPOS /></Layout>} />
-          <Route path="/landing/shopify" element={<Layout><LandingShopify /></Layout>} />
-          <Route path="/landing/terminal-mercado-pago" element={<Layout><LandingMercadoPagoTerminal /></Layout>} />
-          <Route path="/old-index" element={<Index />} />
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/servicios" element={<Servicios />} />
-          <Route path="/servicios/:slug" element={<ServicioDetalle />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/kommo" element={<Kommo />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/privacidad" element={<Privacidad />} />
-          <Route path="/terminos" element={<Terminos />} />
-          <Route path="/admin/chat" element={<ProtectedAdminRoute element={<OperatorChat />} />} />
-          <Route path="/admin/login" element={<AdminLogin />} />
-          <Route path="/admin/dashboard" element={<ProtectedUserRoute element={<AdminDashboard />} />} />
-          <Route path="/admin/cms" element={<ProtectedUserRoute element={<AdminCMS />} />} />
-          <Route path="/admin/email" element={<ProtectedUserRoute element={<AdminEmailEditor />} />} />
-          <Route path="/admin/integraciones" element={<ProtectedUserRoute element={<AdminIntegrations />} />} />
-          <Route path="/admin/reportes" element={<ProtectedUserRoute element={<AdminReports />} />} />
-          <Route path="/admin/roles" element={<ProtectedAdminRoute element={<AdminRoles />} />} />
-          <Route path="/admin/cms/post/new" element={<ProtectedUserRoute element={<AdminPostEditor />} />} />
-          <Route path="/admin/cms/post/:id" element={<ProtectedUserRoute element={<AdminPostEditor />} />} />
-          <Route path="/admin/cms/taxonomias" element={<ProtectedAdminRoute element={<AdminTaxonomies />} />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/nosotros" element={<Layout><Nosotros /></Layout>} />
+          <Route path="/servicios" element={<Layout><Servicios /></Layout>} />
+          <Route path="/servicios/:slug" element={<Layout><ServicioDetalle /></Layout>} />
+          <Route path="/portfolio" element={<Layout><Portfolio /></Layout>} />
+          {/* removed kommo */}
+          <Route path="/blog" element={<Layout><Blog /></Layout>} />
+          <Route path="/blog/:slug" element={<Layout><BlogPost /></Layout>} />
+          <Route path="/contacto" element={<Layout><Contacto /></Layout>} />
+          <Route path="/privacidad" element={<Layout><Privacidad /></Layout>} />
+          <Route path="/terminos" element={<Layout><Terminos /></Layout>} />
+          <Route path="*" element={<Layout><NotFound /></Layout>} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

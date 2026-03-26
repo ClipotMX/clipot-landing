@@ -1,5 +1,4 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import CTA from "@/components/CTA";
@@ -28,20 +27,17 @@ const ServicioDetalle = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title={`${service.title} en CDMX | Agencia de marketing digital – Clipot`}
+        title={`${service.title} en México – Clipot`}
         description={service.description}
         keywords={[
           service.title,
-          "servicios de marketing digital cdmx",
-          "agencia de marketing digital ciudad de méxico",
-          "generación de leads cdmx",
-          "paid media méxico",
+          "business os méxico",
+          "ecosistema empresarial",
+          "gestión operativa",
         ]}
         type="article"
         canonical={`/servicios/${service.slug}`}
       />
-      <Header />
-
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background">
         <div className="container mx-auto px-4">
