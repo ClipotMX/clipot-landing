@@ -80,11 +80,11 @@ const Contacto = () => {
     <div className="min-h-screen">
       <SEO
         title="Contacto | Clipot – Sede en Guadalajara, Jalisco"
-        description="Contáctanos. Sede en Guadalajara (Jalisco). Atendemos todo México. Agenda una llamada y recibe una propuesta para implementar Business OS en tu empresa."
+        description="Contáctanos. Sede en Guadalajara (Jalisco). Atendemos todo México. Agenda una llamada y recibe una propuesta para implementar Negocio Core (NC) en tu empresa."
         keywords={[
           "clipot guadalajara",
           "contacto empresa jalisco",
-          "business os méxico",
+          "negocio core méxico",
           "ecosistema empresarial",
           "gestión operativa méxico",
         ]}

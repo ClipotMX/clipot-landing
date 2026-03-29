@@ -1,35 +1,28 @@
-import { Boxes, Layers, Cog, Building2 } from "lucide-react";
+import { Globe, Store, Shuffle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const plans = [
   {
-    icon: Boxes,
-    title: "Business OS Lite",
-    slug: "business-os-lite",
-    description: "Ecosistema básico para emprendedores y microempresas. Orden operativo sin complejidad.",
-    bullets: ["Clientes y contactos", "Agenda y tareas", "Métricas básicas"],
+    icon: Globe,
+    title: "Negocio Digital",
+    slug: "negocio-digital",
+    description: "CRM + Shopify: sincronización de ventas online y leads digitales.",
+    bullets: ["Pedidos online", "Carrito abandonado", "Leads al CRM"],
   },
   {
-    icon: Layers,
-    title: "Business OS Advance",
-    slug: "business-os-advance",
-    description: "Productividad y automatización intermedia para pymes que buscan eficiencia.",
-    bullets: ["Pipelines por área", "Automatización de seguimiento", "Reportes ejecutivos"],
+    icon: Store,
+    title: "Negocio Plus",
+    slug: "negocio-plus",
+    description: "CRM + Pulpos POS: ventas físicas, clientes e inventario local.",
+    bullets: ["Clientes presenciales", "Inventario local", "Compras offline"],
   },
   {
-    icon: Cog,
-    title: "Business OS Pro",
-    slug: "business-os-pro",
-    description: "Integraciones avanzadas y análisis empresarial para compañías en crecimiento.",
-    bullets: ["Integraciones externas", "Analítica avanzada", "KPIs de desempeño"],
-  },
-  {
-    icon: Building2,
-    title: "Business OS High",
-    slug: "business-os-high",
-    description: "Ecosistema completo y personalizable para corporativos con operación compleja.",
-    bullets: ["Arquitectura modular", "Permisos granulares", "Data Warehouse"],
+    icon: Shuffle,
+    title: "Negocio Total",
+    slug: "negocio-total",
+    description: "Omnicanalidad 3 vías: CRM <-> Shopify <-> Pulpos.",
+    bullets: ["Inventario omnicanal", "Merge de clientes", "Resolución de conflictos"],
   },
 ];
 
@@ -45,7 +38,7 @@ export default function PlansShowcase() {
             transition={{ duration: 0.45 }}
             className="font-display text-3xl md:text-4xl font-bold"
           >
-            Planes de Business OS
+            Negocio Core
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -58,7 +51,7 @@ export default function PlansShowcase() {
           </motion.p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {plans.map((p, idx) => (
             <motion.div
               key={p.slug}
@@ -89,4 +82,3 @@ export default function PlansShowcase() {
     </section>
   );
 }
-

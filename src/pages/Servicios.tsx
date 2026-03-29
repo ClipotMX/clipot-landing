@@ -4,33 +4,44 @@ import ChatWidget from "@/components/ChatWidget";
 import CTA from "@/components/CTA";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Boxes, Layers, Cog, Building2, CheckCircle } from "lucide-react";
+import { ArrowRight, Boxes, Globe, Store, Shuffle, CreditCard, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
 
 const services = [
   {
     icon: Boxes,
-    title: "Business OS Lite",
-    description: "Ecosistema básico de gestión empresarial para emprendedores y microempresas. Enfoque en orden operativo sin complejidad.",
-    features: ["Clientes y contactos", "Agenda y recordatorios", "Tareas y seguimiento", "Tablero básico de métricas"],
+    title: "Negocio Lite",
+    slug: "negocio-lite",
+    description: "Módulos standalone para iniciar sin dependencias cruzadas. Arquitectura modular lista para escalar.",
+    features: ["Instancias independientes", "Bloques por área", "Setup rápido", "Base para escalar"],
   },
   {
-    icon: Layers,
-    title: "Business OS Advance",
-    description: "Herramientas intermedias de productividad y automatización para pymes que buscan eficiencia y consistencia.",
-    features: ["Pipelines por área", "Automatización de seguimiento", "Plantillas operativas", "Reportes ejecutivos"],
+    icon: Globe,
+    title: "Negocio Digital",
+    slug: "negocio-digital",
+    description: "CRM (Kommo/Bolten) + Shopify para sincronización de ventas online y leads digitales.",
+    features: ["Pedidos online", "Abandono de carrito", "Leads al CRM", "Automatizaciones"],
   },
   {
-    icon: Cog,
-    title: "Business OS Pro",
-    description: "Integraciones avanzadas y análisis empresarial para compañías en crecimiento que requieren visibilidad y control.",
-    features: ["Integraciones externas", "Analítica avanzada", "Procesos documentados", "KPIs de desempeño"],
+    icon: Store,
+    title: "Negocio Plus",
+    slug: "negocio-plus",
+    description: "CRM (Kommo/Bolten) + Pulpos (POS) para ventas presenciales, clientes e inventario local.",
+    features: ["Clientes tienda física", "Inventario local", "Estados de compra offline", "Control por sucursal"],
   },
   {
-    icon: Building2,
-    title: "Business OS High",
-    description: "Ecosistema completo y personalizable para corporativos con operación compleja y necesidad de gobierno de procesos.",
-    features: ["Arquitectura modular", "Permisos y roles granulares", "Data Warehouse", "Reportes financieros y operativos"],
+    icon: Shuffle,
+    title: "Negocio Total",
+    slug: "negocio-total",
+    description: "Omnicanalidad completa: Kommo/Bolten <-> Shopify <-> Pulpos con inventario y clientes unificados.",
+    features: ["Inventario omnicanal", "Unificación de clientes", "Resolución de conflictos", "Reportes unificados"],
+  },
+  {
+    icon: CreditCard,
+    title: "Negocio Pay",
+    slug: "negocio-pay",
+    description: "Mercado Pago para cobros, webhooks de transacciones y conciliación de pagos.",
+    features: ["Links de pago", "Webhooks", "Conciliación", "Estatus de pago"],
   },
 ];
 
@@ -38,12 +49,17 @@ const Servicios = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Servicios Business OS en México – Clipot"
-        description="Planes de Business OS para distintos tamaños de empresa: Lite, Advance, Pro y High. Sede en Guadalajara, Jalisco; atendemos todo México."
+        title="Servicios Negocio Core en México – Clipot"
+        description="Servicios de Negocio Core: Negocio Lite, Negocio Digital, Negocio Plus, Negocio Total y Negocio Pay. Sede en Guadalajara, Jalisco; atendemos todo México."
         keywords={[
-          "business os méxico",
+          "negocio core",
+          "negocio core méxico",
+          "negocio digital",
+          "negocio plus",
+          "negocio total",
+          "negocio lite",
+          "negocio pay",
           "ecosistema empresarial méxico",
-          "sistema operativo de negocio",
           "gestión empresarial guadalajara",
           "automatización pymes méxico",
         ]}
@@ -92,7 +108,7 @@ const Servicios = () => {
                       {service.description}
                     </p>
                     <Button asChild>
-                      <Link to={`/servicios/${service.title.toLowerCase().replace(/ /g, '-')}`}>
+                      <Link to={`/servicios/${service.slug}`}>
                         Ver más
                         <ArrowRight className="ml-2" size={18} />
                       </Link>

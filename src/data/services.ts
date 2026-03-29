@@ -1,4 +1,4 @@
-import { Boxes, Layers, Cog, Building2, LucideIcon } from "lucide-react";
+import { Boxes, Globe, Store, Shuffle, CreditCard, LucideIcon } from "lucide-react";
 
 export interface Service {
   slug: string;
@@ -15,116 +15,144 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    slug: "business-os-lite",
+    slug: "negocio-lite",
     icon: Boxes,
-    title: "Business OS Lite",
-    tagline: "Ecosistema básico para emprendedores y microempresas",
-    description: "Orden operativo sin complejidad: clientes, tareas, agenda y métricas básicas. Ideal para iniciar con estructura.",
-    features: ["Clientes y contactos", "Agenda y recordatorios", "Tareas y seguimiento", "Tablero básico de métricas"],
+    title: "Negocio Lite",
+    tagline: "Módulos standalone para iniciar sin dependencias",
+    description: "Implementación modular por bloques. Permite operar un módulo aislado (ej. CRM o tienda) sin dependencias cruzadas.",
+    features: ["Instancias independientes", "Bloques por área", "Setup rápido", "Base para escalar"],
     benefits: [
-      "Visión clara de pendientes y próximos pasos",
-      "Seguimiento simple y consistente",
-      "Registro de clientes sin fricción",
-      "Primer tablero de métricas operativas",
-      "Base para escalar a planes superiores",
-      "Implementación rápida y guiada"
+      "Arranque rápido sin complejidad",
+      "Menos riesgo al implementar por módulos",
+      "Adopción simple por equipo",
+      "Estructura lista para escalar",
+      "Orden operativo desde el día 1",
+      "Migración controlada a integraciones"
     ],
     process: [
-      { step: "01", title: "Diagnóstico", description: "Entendemos tu operación actual y priorizamos los bloques críticos." },
-      { step: "02", title: "Setup", description: "Configuramos clientes, agenda, tareas y tablero básico." },
-      { step: "03", title: "Arranque", description: "Capacitamos y acompañamos para adoptar el sistema." },
-      { step: "04", title: "Ajustes", description: "Iteramos con base en tu operación real y feedback." }
+      { step: "01", title: "Diagnóstico", description: "Definimos el módulo inicial y el alcance del arranque." },
+      { step: "02", title: "Setup", description: "Configuramos estructura, campos y flujos básicos." },
+      { step: "03", title: "Arranque", description: "Capacitamos al equipo y dejamos operación estable." },
+      { step: "04", title: "Escala", description: "Preparamos el siguiente módulo cuando esté listo el negocio." }
     ],
     faqs: [
-      { question: "¿Qué incluye el Lite?", answer: "Bloques base: clientes, tareas, agenda y métricas operativas simples." },
-      { question: "¿Puedo migrar después?", answer: "Sí, puedes evolucionar a Advance, Pro o High sin perder datos." },
-      { question: "¿Cuánto tarda?", answer: "Entre 1 y 2 semanas dependiendo de tu disponibilidad." }
+      { question: "¿Negocio Lite es una integración completa?", answer: "No. Es modular y standalone: iniciamos con un bloque sin dependencias cruzadas." },
+      { question: "¿Puedo escalar después?", answer: "Sí. Está diseñado para migrar a Negocio Digital, Negocio Plus o Negocio Total sin reescribir la base." },
+      { question: "¿Cuánto tarda?", answer: "Depende del módulo inicial, normalmente 1–3 semanas." }
     ],
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
   },
   {
-    slug: "business-os-advance",
-    icon: Layers,
-    title: "Business OS Advance",
-    tagline: "Productividad y automatización intermedia para pymes",
-    description: "Pipelines por área, automatización de seguimiento y reportes ejecutivos para operar con eficiencia y consistencia.",
-    features: ["Pipelines por área", "Automatización de seguimiento", "Plantillas operativas", "Reportes ejecutivos"],
+    slug: "negocio-digital",
+    icon: Globe,
+    title: "Negocio Digital",
+    tagline: "CRM + Shopify para ventas online y leads digitales",
+    description: "Integramos CRM (Kommo/Bolten) con Shopify para sincronizar pedidos, abandono de carrito y creación/seguimiento de leads digitales.",
+    features: ["Sincronización de pedidos", "Abandono de carrito", "Leads digitales al CRM", "Automatizaciones comerciales"],
     benefits: [
-      "Menos fugas en procesos clave",
-      "Seguimiento consistente sin depender de memoria",
-      "Visibilidad ejecutiva clara",
-      "Procesos documentados y replicables",
-      "Base de datos ordenada",
-      "Adopción guiada por nuestro equipo"
+      "Visibilidad completa del funnel digital",
+      "Seguimiento automático a carritos abandonados",
+      "Menos fugas de leads por respuesta tardía",
+      "Datos unificados para marketing y ventas",
+      "Atribución más clara de ventas online",
+      "Operación escalable para e-commerce"
     ],
     process: [
-      { step: "01", title: "Mapa de procesos", description: "Identificamos áreas y definimos pipelines y reglas." },
-      { step: "02", title: "Automatización", description: "Implementamos recordatorios, tareas y flujos clave." },
-      { step: "03", title: "Reporting", description: "Configuramos tableros y reportes ejecutivos." },
-      { step: "04", title: "Optimización", description: "Iteramos según fricción y resultados." }
+      { step: "01", title: "Diagnóstico", description: "Mapeamos eventos clave: compra, carrito, lead, y contacto." },
+      { step: "02", title: "Webhooks", description: "Conectamos eventos de Shopify con el CRM y reglas de negocio." },
+      { step: "03", title: "Automatización", description: "Secuencias y tareas de seguimiento para conversión." },
+      { step: "04", title: "Optimización", description: "Ajustes por métricas de conversión y tiempos de respuesta." }
     ],
     faqs: [
-      { question: "¿Qué automatizan?", answer: "Recordatorios, asignaciones, cambios de estado y tareas críticas." },
-      { question: "¿Necesito equipo técnico?", answer: "No, nosotros configuramos y te capacitamos." },
-      { question: "¿Se integra con herramientas?", answer: "En Advance se preparan integraciones base; Pro amplía esto." }
+      { question: "¿Qué se sincroniza?", answer: "Pedidos, clientes, y eventos (ej. carritos) según tu configuración." },
+      { question: "¿Kommo o Bolten?", answer: "Trabajamos con ambos. La lógica del módulo se mantiene; cambia el conector." },
+      { question: "¿Requiere Shopify Plus?", answer: "No necesariamente. Definimos alcance según tu plan y requerimientos." }
     ],
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop"
   },
   {
-    slug: "business-os-pro",
-    icon: Cog,
-    title: "Business OS Pro",
-    tagline: "Integraciones avanzadas y análisis empresarial",
-    description: "Conecta sistemas externos, define KPIs y obtén analítica avanzada para tomar decisiones con datos.",
-    features: ["Integraciones externas", "Analítica avanzada", "Procesos documentados", "KPIs de desempeño"],
+    slug: "negocio-plus",
+    icon: Store,
+    title: "Negocio Plus",
+    tagline: "CRM + Pulpos POS para tienda física e inventario local",
+    description: "Integramos CRM (Kommo/Bolten) con Pulpos (POS) para sincronizar clientes de tienda física, compras offline e inventario local.",
+    features: ["Clientes presenciales al CRM", "Estados de compra offline", "Inventario local", "Control por sucursal"],
     benefits: [
-      "Menos silos de información",
-      "Decisiones basadas en datos",
-      "Procesos medibles de punta a punta",
-      "Integraciones robustas",
-      "Seguridad y gobierno de datos",
-      "Soporte y mejora continua"
+      "Operación física con trazabilidad",
+      "Control de inventario y ventas por sucursal",
+      "Clientes unificados para seguimiento",
+      "Menos errores en caja y conciliación",
+      "Visibilidad de ventas presenciales",
+      "Base para omnicanalidad (Negocio Total)"
     ],
     process: [
-      { step: "01", title: "Arquitectura", description: "Diseñamos cómo deben fluir los datos entre sistemas." },
-      { step: "02", title: "Integración", description: "Conectamos herramientas clave y normalizamos datos." },
-      { step: "03", title: "KPIs", description: "Definimos métricas y tableros por área." },
-      { step: "04", title: "Análisis", description: "Implementamos insights accionables y alertas." }
+      { step: "01", title: "Diagnóstico", description: "Mapeamos operación de sucursales, caja e inventario." },
+      { step: "02", title: "Sincronización", description: "Definimos qué datos fluyen entre POS y CRM." },
+      { step: "03", title: "Estandarización", description: "Campos y reglas para datos consistentes." },
+      { step: "04", title: "Reporting", description: "Tableros de ventas e inventario con visibilidad operativa." }
     ],
     faqs: [
-      { question: "¿Qué sistemas integran?", answer: "CRM, POS, contabilidad, e-commerce, mensajería y más (según caso)." },
-      { question: "¿Cómo aseguran calidad de datos?", answer: "Validaciones, normalización y reglas de negocio." },
-      { question: "¿Qué tipo de reportes?", answer: "Operativos, comerciales y de rendimiento con segmentación." }
+      { question: "¿Se puede operar por sucursal?", answer: "Sí. Negocio Plus contempla estructura por sucursal y control de inventario local." },
+      { question: "¿Qué pasa con clientes duplicados?", answer: "Se define una regla de unificación; Negocio Total profundiza en el merge omnicanal." },
+      { question: "¿Funciona con varios puntos de venta?", answer: "Sí, ajustamos la sincronización a tu operación real." }
     ],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
   },
   {
-    slug: "business-os-high",
-    icon: Building2,
-    title: "Business OS High",
-    tagline: "Ecosistema completo y personalizable para corporativos",
-    description: "Arquitectura modular, permisos granulares, data warehouse y reporting financiero y operativo a escala.",
-    features: ["Arquitectura modular", "Permisos y roles granulares", "Data Warehouse", "Reportes financieros y operativos"],
+    slug: "negocio-total",
+    icon: Shuffle,
+    title: "Negocio Total",
+    tagline: "Omnicanalidad completa: CRM <-> Shopify <-> Pulpos",
+    description: "Sincronización a 3 vías para inventario y clientes unificados. Resolución de conflictos omnicanal y merge de perfiles.",
+    features: ["Inventario omnicanal", "Unificación de clientes (merge)", "Resolución de conflictos", "Reportes unificados"],
     benefits: [
-      "Gobierno de procesos y datos",
-      "Escalabilidad y resiliencia",
-      "Personalización total por área",
-      "Cumplimiento y auditoría",
-      "Visibilidad ejecutiva integral",
-      "Acompañamiento dedicado"
+      "Visión única del cliente (online + físico)",
+      "Menos quiebres de inventario",
+      "Operación omnicanal consistente",
+      "Mejor atribución de ventas y recompra",
+      "Menos conflictos entre canales",
+      "Base sólida para expansión"
     ],
     process: [
-      { step: "01", title: "Blueprint", description: "Documento de arquitectura y procesos con alcance y prioridades." },
-      { step: "02", title: "Implementación", description: "Despliegue por fases con control de cambios." },
-      { step: "03", title: "Data & BI", description: "Modelo de datos, DW y tableros financieros/operativos." },
-      { step: "04", title: "Governance", description: "Permisos, roles, auditoría y continuidad operativa." }
+      { step: "01", title: "Blueprint", description: "Definimos entidades, claves de unificación y reglas omnicanal." },
+      { step: "02", title: "Integración 3 vías", description: "Conectamos CRM, Shopify y Pulpos con reglas de prioridad." },
+      { step: "03", title: "Conflictos", description: "Implementamos resolución de inventario y merges de cliente." },
+      { step: "04", title: "Monitoreo", description: "Alertas, tableros y mejora continua basada en datos." }
     ],
     faqs: [
-      { question: "¿Cuánto dura el proyecto?", answer: "Depende del alcance, típicamente de 6 a 16 semanas por fase." },
-      { question: "¿Qué áreas cubre?", answer: "Comercial, operación, finanzas, soporte, logística y más." },
-      { question: "¿Qué nivel de personalización?", answer: "Total: procesos, métricas, permisos y flujos por área." }
+      { question: "¿Cómo resuelven conflictos de inventario?", answer: "Definimos prioridad por canal y reglas por tipo de producto/sucursal." },
+      { question: "¿Cómo unifican clientes?", answer: "Con llaves de identidad (tel/email) y reglas de merge por fuente." },
+      { question: "¿Se puede implementar por fases?", answer: "Sí. Normalmente se inicia con Negocio Lite, Negocio Digital o Negocio Plus y se escala." }
     ],
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&h=600&fit=crop"
+  },
+  {
+    slug: "negocio-pay",
+    icon: CreditCard,
+    title: "Negocio Pay",
+    tagline: "Cobros y conciliación con Mercado Pago",
+    description: "Integración de pagos con Mercado Pago: links de pago, webhooks de transacciones y conciliación de cobros aprobados/rechazados.",
+    features: ["Links de pago", "Webhooks de transacciones", "Conciliación", "Estatus de pago en operación"],
+    benefits: [
+      "Cobro más ágil con tarjeta",
+      "Conciliación clara y trazable",
+      "Menos errores de registro",
+      "Alertas por pagos rechazados",
+      "Integración con operación y reporting",
+      "Base para automatizaciones de cobranza"
+    ],
+    process: [
+      { step: "01", title: "Setup", description: "Configuramos credenciales y alcance de cobro." },
+      { step: "02", title: "Links", description: "Generación de links y flujos de pago según tu operación." },
+      { step: "03", title: "Webhooks", description: "Procesamiento de eventos aprobados/rechazados." },
+      { step: "04", title: "Conciliación", description: "Reglas de conciliación y tableros de control." }
+    ],
+    faqs: [
+      { question: "¿Sirve para negocio físico?", answer: "Sí. Negocio Pay cubre cobro con tarjeta y conciliación para operación presencial." },
+      { question: "¿Qué eventos procesan?", answer: "Aprobado, rechazado, reembolso y cambios de estado según tu caso." },
+      { question: "¿Se integra con CRM/POS?", answer: "Puede integrarse como módulo adicional dentro de Negocio Plus o Negocio Total." }
+    ],
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
   }
 ];
 

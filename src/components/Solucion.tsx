@@ -55,7 +55,7 @@ const Solucion = () => {
             transition={{ duration: 0.45, delay: 0.06 }}
             className="mt-5 text-lg text-brand-muted"
           >
-            Clipot diseña e implementa Business OS: el sistema que conecta todas las partes de tu empresa.
+            Clipot diseña e implementa Negocio Core (NC): el sistema que conecta todas las partes de tu empresa.
           </motion.p>
         </div>
 

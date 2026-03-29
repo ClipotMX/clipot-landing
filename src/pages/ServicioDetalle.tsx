@@ -31,7 +31,7 @@ const ServicioDetalle = () => {
         description={service.description}
         keywords={[
           service.title,
-          "business os méxico",
+          "negocio core méxico",
           "ecosistema empresarial",
           "gestión operativa",
         ]}

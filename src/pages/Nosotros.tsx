@@ -33,7 +33,7 @@ const Nosotros = () => {
           "clipot guadalajara",
           "agencia en jalisco",
           "servicios empresariales méxico",
-          "business os méxico",
+          "negocio core méxico",
           "ecosistema empresarial",
         ]}
       />
@@ -53,7 +53,7 @@ const Nosotros = () => {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Sede en Guadalajara, Jalisco. Atendemos todo México y proyectamos expansión futura a Latinoamérica y España. 
-              Hoy nos enfocamos en el mercado mexicano para consolidar un ecosistema empresarial (Business OS) claro, ordenado y funcional.
+              Hoy nos enfocamos en el mercado mexicano para consolidar Negocio Core (NC): un ecosistema empresarial claro, ordenado y funcional.
             </p>
           </motion.div>
         </div>
@@ -77,7 +77,7 @@ const Nosotros = () => {
                   Menos ruido, más orden operativo. Menos silos, más visibilidad.
                 </p>
                 <p>
-                  Business OS es nuestra forma de integrar clientes, ventas, pagos, operación y reportes para que todo trabaje en conjunto.
+                  Negocio Core (NC) es nuestra forma de integrar clientes, ventas, pagos, operación y reportes para que todo trabaje en conjunto.
                   Primero México; después Latinoamérica y España.
                 </p>
                 <p className="font-semibold text-foreground">

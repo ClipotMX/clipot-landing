@@ -88,7 +88,7 @@ const HeroNetwork = () => {
     { id: "reportes", label: "Reportes", x: 252, y: 164 },
   ] as const;
 
-  const center = { id: "os", label: "Business OS", x: 140, y: 92 } as const;
+  const center = { id: "os", label: "Negocio Core", x: 140, y: 92 } as const;
   const moduleSize = { w: 120, h: 40 } as const;
   const centerSize = { w: 140, h: 48 } as const;
 
