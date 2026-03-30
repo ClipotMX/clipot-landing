@@ -1,4 +1,4 @@
-import { Boxes, Globe, Store, Shuffle, CreditCard, LucideIcon } from "lucide-react";
+import { Globe, Store, Shuffle, LucideIcon } from "lucide-react";
 
 export interface Service {
   slug: string;
@@ -6,6 +6,8 @@ export interface Service {
   title: string;
   tagline: string;
   description: string;
+  monthlyPriceFrom: number;
+  setupPriceFrom: number;
   features: string[];
   benefits: string[];
   process: { step: string; title: string; description: string }[];
@@ -15,47 +17,21 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    slug: "negocio-lite",
-    icon: Boxes,
-    title: "Negocio Lite",
-    tagline: "Módulos standalone para iniciar sin dependencias",
-    description: "Implementación modular por bloques. Permite operar un módulo aislado (ej. CRM o tienda) sin dependencias cruzadas.",
-    features: ["Instancias independientes", "Bloques por área", "Setup rápido", "Base para escalar"],
-    benefits: [
-      "Arranque rápido sin complejidad",
-      "Menos riesgo al implementar por módulos",
-      "Adopción simple por equipo",
-      "Estructura lista para escalar",
-      "Orden operativo desde el día 1",
-      "Migración controlada a integraciones"
-    ],
-    process: [
-      { step: "01", title: "Diagnóstico", description: "Definimos el módulo inicial y el alcance del arranque." },
-      { step: "02", title: "Setup", description: "Configuramos estructura, campos y flujos básicos." },
-      { step: "03", title: "Arranque", description: "Capacitamos al equipo y dejamos operación estable." },
-      { step: "04", title: "Escala", description: "Preparamos el siguiente módulo cuando esté listo el negocio." }
-    ],
-    faqs: [
-      { question: "¿Negocio Lite es una integración completa?", answer: "No. Es modular y standalone: iniciamos con un bloque sin dependencias cruzadas." },
-      { question: "¿Puedo escalar después?", answer: "Sí. Está diseñado para migrar a Negocio Digital, Negocio Plus o Negocio Total sin reescribir la base." },
-      { question: "¿Cuánto tarda?", answer: "Depende del módulo inicial, normalmente 1–3 semanas." }
-    ],
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
-  },
-  {
     slug: "negocio-digital",
     icon: Globe,
     title: "Negocio Digital",
     tagline: "CRM + Shopify para ventas online y leads digitales",
     description: "Integramos CRM (Kommo/Bolten) con Shopify para sincronizar pedidos, abandono de carrito y creación/seguimiento de leads digitales.",
+    monthlyPriceFrom: 14900,
+    setupPriceFrom: 9900,
     features: ["Sincronización de pedidos", "Abandono de carrito", "Leads digitales al CRM", "Automatizaciones comerciales"],
     benefits: [
-      "Visibilidad completa del funnel digital",
-      "Seguimiento automático a carritos abandonados",
-      "Menos fugas de leads por respuesta tardía",
-      "Datos unificados para marketing y ventas",
-      "Atribución más clara de ventas online",
-      "Operación escalable para e-commerce"
+      "Reducción del tiempo de respuesta a leads digitales",
+      "Recuperación de oportunidades con seguimiento a carritos",
+      "Visibilidad del funnel y conversiones por canal",
+      "Menos fugas por falta de proceso",
+      "Mejor continuidad operativa del e-commerce",
+      "Métricas claras para decisiones semanales"
     ],
     process: [
       { step: "01", title: "Diagnóstico", description: "Mapeamos eventos clave: compra, carrito, lead, y contacto." },
@@ -76,14 +52,16 @@ export const services: Service[] = [
     title: "Negocio Plus",
     tagline: "CRM + Pulpos POS para tienda física e inventario local",
     description: "Integramos CRM (Kommo/Bolten) con Pulpos (POS) para sincronizar clientes de tienda física, compras offline e inventario local.",
+    monthlyPriceFrom: 24900,
+    setupPriceFrom: 14900,
     features: ["Clientes presenciales al CRM", "Estados de compra offline", "Inventario local", "Control por sucursal"],
     benefits: [
-      "Operación física con trazabilidad",
+      "Menos errores de operación y caja",
       "Control de inventario y ventas por sucursal",
-      "Clientes unificados para seguimiento",
-      "Menos errores en caja y conciliación",
-      "Visibilidad de ventas presenciales",
-      "Base para omnicanalidad (Negocio Total)"
+      "Seguimiento a clientes presenciales con historial",
+      "Visibilidad diaria para dirección",
+      "Menos retrabajo por datos dispersos",
+      "Base sólida para escalar a omnicanal"
     ],
     process: [
       { step: "01", title: "Diagnóstico", description: "Mapeamos operación de sucursales, caja e inventario." },
@@ -104,14 +82,16 @@ export const services: Service[] = [
     title: "Negocio Total",
     tagline: "Omnicanalidad completa: CRM <-> Shopify <-> Pulpos",
     description: "Sincronización a 3 vías para inventario y clientes unificados. Resolución de conflictos omnicanal y merge de perfiles.",
+    monthlyPriceFrom: 44900,
+    setupPriceFrom: 24900,
     features: ["Inventario omnicanal", "Unificación de clientes (merge)", "Resolución de conflictos", "Reportes unificados"],
     benefits: [
-      "Visión única del cliente (online + físico)",
-      "Menos quiebres de inventario",
+      "Unificación del cliente (online + físico) para mejor seguimiento",
+      "Menos quiebres y conflictos de inventario entre canales",
       "Operación omnicanal consistente",
-      "Mejor atribución de ventas y recompra",
-      "Menos conflictos entre canales",
-      "Base sólida para expansión"
+      "Mejor visibilidad del ROI por canal",
+      "Menos fricción entre equipos",
+      "Escalabilidad para multi-sucursal"
     ],
     process: [
       { step: "01", title: "Blueprint", description: "Definimos entidades, claves de unificación y reglas omnicanal." },
@@ -122,38 +102,10 @@ export const services: Service[] = [
     faqs: [
       { question: "¿Cómo resuelven conflictos de inventario?", answer: "Definimos prioridad por canal y reglas por tipo de producto/sucursal." },
       { question: "¿Cómo unifican clientes?", answer: "Con llaves de identidad (tel/email) y reglas de merge por fuente." },
-      { question: "¿Se puede implementar por fases?", answer: "Sí. Normalmente se inicia con Negocio Lite, Negocio Digital o Negocio Plus y se escala." }
+      { question: "¿Se puede implementar por fases?", answer: "Sí. Normalmente se inicia con Negocio Digital o Negocio Plus y se escala a Negocio Total." }
     ],
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&h=600&fit=crop"
   },
-  {
-    slug: "negocio-pay",
-    icon: CreditCard,
-    title: "Negocio Pay",
-    tagline: "Cobros y conciliación con Mercado Pago",
-    description: "Integración de pagos con Mercado Pago: links de pago, webhooks de transacciones y conciliación de cobros aprobados/rechazados.",
-    features: ["Links de pago", "Webhooks de transacciones", "Conciliación", "Estatus de pago en operación"],
-    benefits: [
-      "Cobro más ágil con tarjeta",
-      "Conciliación clara y trazable",
-      "Menos errores de registro",
-      "Alertas por pagos rechazados",
-      "Integración con operación y reporting",
-      "Base para automatizaciones de cobranza"
-    ],
-    process: [
-      { step: "01", title: "Setup", description: "Configuramos credenciales y alcance de cobro." },
-      { step: "02", title: "Links", description: "Generación de links y flujos de pago según tu operación." },
-      { step: "03", title: "Webhooks", description: "Procesamiento de eventos aprobados/rechazados." },
-      { step: "04", title: "Conciliación", description: "Reglas de conciliación y tableros de control." }
-    ],
-    faqs: [
-      { question: "¿Sirve para negocio físico?", answer: "Sí. Negocio Pay cubre cobro con tarjeta y conciliación para operación presencial." },
-      { question: "¿Qué eventos procesan?", answer: "Aprobado, rechazado, reembolso y cambios de estado según tu caso." },
-      { question: "¿Se integra con CRM/POS?", answer: "Puede integrarse como módulo adicional dentro de Negocio Plus o Negocio Total." }
-    ],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
-  }
 ];
 
 export const getServiceBySlug = (slug: string) => services.find(s => s.slug === slug);

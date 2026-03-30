@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import CalBookingModal from "@/components/CalBookingModal";
+import { buildWhatsAppUrl } from "@/config/contact";
+import { track } from "@vercel/analytics";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,11 +11,11 @@ const Navbar = () => {
 
   const links = useMemo(
     () => [
-      { label: "Inicio", href: "#hero" },
-      { label: "Cómo funciona", href: "#como-funciona" },
-      { label: "Soluciones", href: "#soluciones" },
-      { label: "Servicios", href: "/servicios" },
-      { label: "Contacto", href: "#contacto" },
+      { label: "Inicio", to: "/#hero" },
+      { label: "Proceso", to: "/#como-funciona" },
+      { label: "Soluciones", to: "/#soluciones" },
+      { label: "Paquetes", to: "/servicios" },
+      { label: "Demostración", to: "/#contacto" },
     ],
     [],
   );
@@ -48,29 +50,32 @@ const Navbar = () => {
       ].join(" ")}
     >
       <div className="container mx-auto max-w-6xl h-full px-4 md:px-8 flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg">
+        <Link to="/#hero" className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg">
           <img src="/images/clipot_logo_white.png" alt="Clipot" className="h-7 w-auto" />
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-brand-muted">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
+            <Link
+              key={l.to}
+              to={l.to}
               className="hover:text-brand-text transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg rounded"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <CalBookingModal
+          <a
+            href={buildWhatsAppUrl("Hola Clipot, quiero agendar una demostración de Negocio Core.")}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center h-10 px-4 rounded-lg bg-accent-gradient text-white font-semibold shadow-[0_0_24px_rgba(107,78,255,0.22)] hover:shadow-[0_0_32px_rgba(107,78,255,0.32)] transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg"
-            title="Agendar diagnóstico (30 min)"
+            onClick={() => track("Demo CTA Clicked", { channel: "whatsapp", source: "navbar" })}
           >
-            Agendar diagnóstico
-          </CalBookingModal>
+            Agendar demostración
+          </a>
         </div>
 
         <button
@@ -97,23 +102,28 @@ const Navbar = () => {
           >
             <div className="px-4 pb-5 pt-2 flex flex-col gap-2">
               {links.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
+                <Link
+                  key={l.to}
+                  to={l.to}
                   className="px-3 py-3 rounded-lg text-brand-text hover:bg-brand-surface transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {l.label}
-                </a>
+                </Link>
               ))}
               <div className="mt-2">
-                <CalBookingModal
+                <a
+                  href={buildWhatsAppUrl("Hola Clipot, quiero agendar una demostración de Negocio Core.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center h-11 w-full rounded-lg bg-accent-gradient text-white font-semibold"
-                  title="Agendar diagnóstico (30 min)"
-                  onTrigger={() => setIsMenuOpen(false)}
+                  onClick={() => {
+                    track("Demo CTA Clicked", { channel: "whatsapp", source: "navbar_mobile" });
+                    setIsMenuOpen(false);
+                  }}
                 >
-                  Agendar diagnóstico
-                </CalBookingModal>
+                  Agendar demostración
+                </a>
               </div>
             </div>
           </motion.div>

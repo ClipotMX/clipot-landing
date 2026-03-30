@@ -8,6 +8,7 @@ type ClientCase = {
   name: string;
   industry: string;
   summary: string;
+  result: string;
   improvements: string[];
   websiteUrl: string;
 };
@@ -17,42 +18,48 @@ const clients: ClientCase[] = [
     name: "Inmobiliaria Delta",
     industry: "Inmobiliario",
     summary: "Implementación de seguimiento y calificación de leads con pipeline comercial y reportes ejecutivos.",
-    improvements: ["Respuesta más rápida a leads", "Pipeline visible para dirección", "Reportes semanales automáticos"],
+    result: "-45% tiempo de respuesta",
+    improvements: ["-45% tiempo de respuesta a leads", "+28% conversión a cita", "Reportes ejecutivos semanales"],
     websiteUrl: "https://example.com",
   },
   {
     name: "Restaurantes La Esquina",
     industry: "Restaurantes",
     summary: "Ordenamos ventas y operación: pedidos, pagos, y tablero de métricas por sucursal.",
-    improvements: ["Menos errores operativos", "Cobro más ágil", "Métricas por sucursal"],
+    result: "-30% errores operativos",
+    improvements: ["-30% errores operativos", "-20% tiempo en caja", "Métricas por sucursal diarias"],
     websiteUrl: "https://example.com",
   },
   {
     name: "Clínica Nova",
     industry: "Salud",
     summary: "Automatizamos recordatorios y seguimiento de citas para reducir no-shows y mejorar la ocupación.",
-    improvements: ["Más citas confirmadas", "Menos no-shows", "Seguimiento automatizado"],
+    result: "-25% no-shows",
+    improvements: ["-25% no-shows", "+18% citas confirmadas", "Seguimiento automatizado"],
     websiteUrl: "https://example.com",
   },
   {
     name: "Ecommerce Aurora",
     industry: "Ecommerce",
     summary: "Integración de tienda, pagos y reportes; visibilidad completa del embudo de ventas.",
-    improvements: ["Checkout optimizado", "Conciliación simplificada", "Tablero de ventas en tiempo real"],
+    result: "+12% conversión checkout",
+    improvements: ["+12% conversión checkout", "Conciliación más simple", "Tablero de ventas en tiempo real"],
     websiteUrl: "https://example.com",
   },
   {
     name: "Distribuidora Centro",
     industry: "B2B",
     summary: "CRM + automatización de seguimiento para que el equipo comercial priorice oportunidades calientes.",
-    improvements: ["Seguimiento consistente", "Mejor priorización", "Menos fugas de pipeline"],
+    result: "+22% cierre mensual",
+    improvements: ["+22% cierre mensual", "Mejor priorización de oportunidades", "Menos fugas de pipeline"],
     websiteUrl: "https://example.com",
   },
   {
     name: "Academia Pro",
     industry: "Educación",
     summary: "Implementación de procesos de venta y comunicación con leads para aumentar conversiones a inscripción.",
-    improvements: ["Más agendamientos", "Menos leads fríos", "Proceso replicable"],
+    result: "+35% agendamientos",
+    improvements: ["+35% agendamientos", "Menos leads fríos", "Proceso replicable"],
     websiteUrl: "https://example.com",
   },
 ];
@@ -114,7 +121,7 @@ export default function ClientsCarouselSection() {
                               <div className="text-sm text-brand-muted">{c.industry}</div>
                             </div>
                           </div>
-                          <div className="text-xs text-brand-muted">Ver caso</div>
+                          <div className="text-xs font-semibold text-brand-text">{c.result}</div>
                         </div>
                         <div className="mt-4 text-sm text-brand-muted leading-relaxed line-clamp-3">
                           {c.summary}
@@ -124,6 +131,9 @@ export default function ClientsCarouselSection() {
                     <DialogContent className="w-[min(94vw,820px)] max-w-none">
                       <div className="text-lg font-semibold">{c.name}</div>
                       <div className="text-sm text-muted-foreground">{c.industry}</div>
+                      <div className="mt-2 inline-flex items-center px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-border text-sm font-semibold">
+                        {c.result}
+                      </div>
                       <div className="mt-4 text-sm leading-relaxed">{c.summary}</div>
                       <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {c.improvements.map((i) => (
@@ -156,4 +166,3 @@ export default function ClientsCarouselSection() {
     </section>
   );
 }
-

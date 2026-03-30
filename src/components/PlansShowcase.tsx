@@ -8,6 +8,7 @@ const plans = [
     title: "Negocio Digital",
     slug: "negocio-digital",
     description: "CRM + Shopify: sincronización de ventas online y leads digitales.",
+    monthlyFrom: 14900,
     bullets: ["Pedidos online", "Carrito abandonado", "Leads al CRM"],
   },
   {
@@ -15,6 +16,7 @@ const plans = [
     title: "Negocio Plus",
     slug: "negocio-plus",
     description: "CRM + Pulpos POS: ventas físicas, clientes e inventario local.",
+    monthlyFrom: 24900,
     bullets: ["Clientes presenciales", "Inventario local", "Compras offline"],
   },
   {
@@ -22,9 +24,12 @@ const plans = [
     title: "Negocio Total",
     slug: "negocio-total",
     description: "Omnicanalidad 3 vías: CRM <-> Shopify <-> Pulpos.",
+    monthlyFrom: 44900,
     bullets: ["Inventario omnicanal", "Merge de clientes", "Resolución de conflictos"],
   },
 ];
+
+const formatMXN = (n: number) => `$${n.toLocaleString("es-MX")} MXN`;
 
 export default function PlansShowcase() {
   return (
@@ -64,6 +69,7 @@ export default function PlansShowcase() {
               <p.icon className="w-10 h-10 text-primary mb-4" />
               <div className="font-display text-xl font-semibold">{p.title}</div>
               <div className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.description}</div>
+              <div className="mt-4 text-sm font-semibold text-foreground">Desde {formatMXN(p.monthlyFrom)}/mes</div>
               <ul className="mt-4 space-y-2 text-sm">
                 {p.bullets.map((b) => (
                   <li key={b} className="text-muted-foreground">• {b}</li>

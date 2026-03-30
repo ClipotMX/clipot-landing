@@ -1,6 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import CTA from "@/components/CTA";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import SEO from "@/components/SEO";
+
+const formatMXN = (n: number) => `$${n.toLocaleString("es-MX")} MXN`;
 
 const ServicioDetalle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -72,6 +73,19 @@ const ServicioDetalle = () => {
               {service.description}
             </p>
 
+            <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="rounded-2xl bg-muted p-6">
+                <div className="text-xs text-muted-foreground">Desde</div>
+                <div className="mt-2 text-2xl font-bold">{formatMXN(service.monthlyPriceFrom)}/mes</div>
+                <div className="mt-2 text-sm text-muted-foreground">Soporte continuo y optimización</div>
+              </div>
+              <div className="rounded-2xl bg-muted p-6">
+                <div className="text-xs text-muted-foreground">Implementación</div>
+                <div className="mt-2 text-2xl font-bold">Desde {formatMXN(service.setupPriceFrom)}</div>
+                <div className="mt-2 text-sm text-muted-foreground">Setup, configuración y capacitación</div>
+              </div>
+            </div>
+
             <div className="flex flex-wrap gap-3 mb-10">
               {service.features.map((feature) => (
                 <span
@@ -85,7 +99,7 @@ const ServicioDetalle = () => {
 
             <Button asChild size="lg">
               <Link to="/contacto">
-                Solicitar cotización
+                Agendar demostración
                 <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
@@ -239,7 +253,6 @@ const ServicioDetalle = () => {
 
       <CTA />
       <Footer />
-      <ChatWidget />
     </div>
   );
 };

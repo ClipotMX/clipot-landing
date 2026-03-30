@@ -1,6 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import { motion } from "framer-motion";
 import { ArrowLeft, Clock, Calendar, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -206,7 +205,6 @@ const BlogPost = () => {
       </section>
 
       <Footer />
-      <ChatWidget />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { CLIPOT_PHONE_DISPLAY } from "@/config/contact";
 
 type Props = {
   title: string;
@@ -137,7 +138,7 @@ export default function SEO({
       url: baseUrl || canonicalHref || fullUrl,
       image: resolvedImage,
       logo: ensureAbsoluteUrl("/favicon.ico", baseUrl),
-      telephone: "+52 55 1234 5678",
+      telephone: CLIPOT_PHONE_DISPLAY,
       email: "hola@clipot.com",
       address: {
         "@type": "PostalAddress",
@@ -145,10 +146,7 @@ export default function SEO({
         addressRegion: "Jalisco",
         addressCountry: "MX",
       },
-      areaServed: [
-        { "@type": "AdministrativeArea", name: "Ciudad de México" },
-        { "@type": "Country", name: "México" },
-      ],
+      areaServed: [{ "@type": "Country", name: "México" }],
     };
 
     const websiteSchema: Record<string, unknown> = {

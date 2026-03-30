@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock } from "lucide-react";
 import SEO from "@/components/SEO";
@@ -165,7 +164,6 @@ const Blog = () => {
       </section>
 
       <Footer />
-      <ChatWidget />
     </div>
   );
 };

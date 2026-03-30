@@ -1,64 +1,76 @@
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import CTA from "@/components/CTA";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Boxes, Globe, Store, Shuffle, CreditCard, CheckCircle } from "lucide-react";
+import { ArrowRight, Globe, Store, Shuffle, CheckCircle } from "lucide-react";
 import SEO from "@/components/SEO";
 
 const services = [
   {
-    icon: Boxes,
-    title: "Negocio Lite",
-    slug: "negocio-lite",
-    description: "Módulos standalone para iniciar sin dependencias cruzadas. Arquitectura modular lista para escalar.",
-    features: ["Instancias independientes", "Bloques por área", "Setup rápido", "Base para escalar"],
-  },
-  {
     icon: Globe,
     title: "Negocio Digital",
     slug: "negocio-digital",
-    description: "CRM (Kommo/Bolten) + Shopify para sincronización de ventas online y leads digitales.",
-    features: ["Pedidos online", "Abandono de carrito", "Leads al CRM", "Automatizaciones"],
+    level: "Básico",
+    monthlyFrom: 14900,
+    setupFrom: 9900,
+    description: "Ventas online y leads digitales sincronizados para reducir fricción y mejorar conversión.",
+    features: [
+      "Implementación del sistema",
+      "Capacitación personalizada",
+      "Soporte continuo",
+      "Integraciones (CRM + Shopify)",
+      "Métricas de resultados medibles",
+    ],
   },
   {
     icon: Store,
     title: "Negocio Plus",
     slug: "negocio-plus",
-    description: "CRM (Kommo/Bolten) + Pulpos (POS) para ventas presenciales, clientes e inventario local.",
-    features: ["Clientes tienda física", "Inventario local", "Estados de compra offline", "Control por sucursal"],
+    level: "Profesional",
+    monthlyFrom: 24900,
+    setupFrom: 14900,
+    description: "Operación física conectada: clientes, ventas e inventario con trazabilidad y control por sucursal.",
+    features: [
+      "Implementación del sistema",
+      "Capacitación personalizada",
+      "Soporte continuo",
+      "Integraciones (CRM + Pulpos POS)",
+      "Métricas de resultados medibles",
+    ],
   },
   {
     icon: Shuffle,
     title: "Negocio Total",
     slug: "negocio-total",
-    description: "Omnicanalidad completa: Kommo/Bolten <-> Shopify <-> Pulpos con inventario y clientes unificados.",
-    features: ["Inventario omnicanal", "Unificación de clientes", "Resolución de conflictos", "Reportes unificados"],
-  },
-  {
-    icon: CreditCard,
-    title: "Negocio Pay",
-    slug: "negocio-pay",
-    description: "Mercado Pago para cobros, webhooks de transacciones y conciliación de pagos.",
-    features: ["Links de pago", "Webhooks", "Conciliación", "Estatus de pago"],
+    level: "Empresarial",
+    monthlyFrom: 44900,
+    setupFrom: 24900,
+    description: "Omnicanalidad completa: inventario y clientes unificados para operar y crecer sin caos.",
+    features: [
+      "Implementación del sistema",
+      "Capacitación personalizada",
+      "Soporte continuo",
+      "Integraciones (CRM + Shopify + Pulpos)",
+      "Métricas de resultados medibles",
+    ],
   },
 ];
+
+const formatMXN = (n: number) => `$${n.toLocaleString("es-MX")} MXN`;
 
 const Servicios = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Servicios Negocio Core en México – Clipot"
-        description="Servicios de Negocio Core: Negocio Lite, Negocio Digital, Negocio Plus, Negocio Total y Negocio Pay. Sede en Guadalajara, Jalisco; atendemos todo México."
+        title="Paquetes de Negocio Core en México – Clipot"
+        description="Paquetes de Negocio Core enfocados en resultados: Negocio Digital (Básico), Negocio Plus (Profesional) y Negocio Total (Empresarial). Sede en Guadalajara, Jalisco; atendemos todo México."
         keywords={[
           "negocio core",
           "negocio core méxico",
           "negocio digital",
           "negocio plus",
           "negocio total",
-          "negocio lite",
-          "negocio pay",
           "ecosistema empresarial méxico",
           "gestión empresarial guadalajara",
           "automatización pymes méxico",
@@ -104,6 +116,13 @@ const Servicios = () => {
                     <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
                       {service.title}
                     </h2>
+                    <div className="text-sm font-semibold text-primary mb-2">
+                      {service.level}
+                    </div>
+                    <div className="mb-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+                      <div className="font-semibold text-foreground">Desde {formatMXN(service.monthlyFrom)}/mes</div>
+                      <div className="text-muted-foreground">Setup desde {formatMXN(service.setupFrom)}</div>
+                    </div>
                     <p className="text-lg text-muted-foreground mb-6">
                       {service.description}
                     </p>
@@ -134,7 +153,6 @@ const Servicios = () => {
 
       <CTA />
       <Footer />
-      <ChatWidget />
     </div>
   );
 };

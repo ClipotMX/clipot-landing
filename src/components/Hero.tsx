@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import CalBookingModal from "@/components/CalBookingModal";
+import { buildWhatsAppUrl } from "@/config/contact";
+import { track } from "@vercel/analytics";
 
 const Hero = () => {
   return (
@@ -25,7 +27,7 @@ const Hero = () => {
             transition={{ duration: 0.45, delay: 0.08 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight"
           >
-            Tu negocio organizado. Más ventas. Menos caos.
+            Más ventas. Mejor Seguimiento. Más Control.
           </motion.h1>
 
           <motion.p
@@ -37,7 +39,6 @@ const Hero = () => {
           >
             Implementamos el sistema que conecta tus clientes, ventas, pagos y operaciones — para que tu negocio funcione sin depender de
             que alguien esté encima de todo.
-            <span className="block mt-3">Sede en Guadalajara (Jalisco). Atendemos todo México.</span>
           </motion.p>
 
           <motion.div
@@ -47,11 +48,12 @@ const Hero = () => {
             transition={{ duration: 0.45, delay: 0.24 }}
             className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
           >
+          
             <CalBookingModal
-              className="inline-flex items-center justify-center px-7 py-4 bg-accent-gradient text-white font-semibold rounded-lg shadow-[0_0_28px_rgba(107,78,255,0.22)] hover:shadow-[0_0_38px_rgba(107,78,255,0.32)] transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg"
-              title="Agendar diagnóstico (30 min)"
+              className="inline-flex items-center justify-center px-7 py-4 bg-brand-surface text-brand-text font-semibold rounded-lg border border-brand-border hover:bg-brand-surface/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-bg"
+              title="Agendar demostración (Cal.com)"
             >
-              Agendar diagnóstico gratis
+              Agendar Demostración
             </CalBookingModal>
             <a
               href="#como-funciona"

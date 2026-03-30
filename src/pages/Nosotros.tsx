@@ -1,5 +1,4 @@
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import CTA from "@/components/CTA";
 import { motion } from "framer-motion";
 import { Target, Zap, Heart } from "lucide-react";
@@ -122,7 +121,6 @@ const Nosotros = () => {
 
       <CTA />
       <Footer />
-      <ChatWidget />
     </div>
   );
 };

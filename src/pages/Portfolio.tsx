@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
-import ChatWidget from "@/components/ChatWidget";
 import CTA from "@/components/CTA";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -157,7 +156,6 @@ const Portfolio = () => {
       </section>
 
       <Footer />
-      <ChatWidget />
     </div>
   );
 };

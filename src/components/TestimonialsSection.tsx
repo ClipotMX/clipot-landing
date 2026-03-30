@@ -10,21 +10,21 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "En el primer mes ordenamos el seguimiento de leads y el equipo dejó de perder oportunidades. Ahora todo queda registrado y medimos tiempos de respuesta.",
+    quote: "En el primer mes bajamos el tiempo de respuesta y dejamos de perder oportunidades. Hoy el pipeline está visible y medimos conversión por etapa.",
     name: "Mariana G.",
     role: "Directora Comercial",
     company: "Empresa B2B",
-    location: "CDMX",
+    location: "México",
   },
   {
-    quote: "La implementación conectó ventas, pagos y reportes. La operación se siente más ligera y podemos tomar decisiones con datos, no con suposiciones.",
+    quote: "Conectamos operación y reportes. Reducimos retrabajo y ahora dirección ve métricas semanales sin depender de Excel.",
     name: "Luis R.",
     role: "CEO",
     company: "Retail",
     location: "Guadalajara",
   },
   {
-    quote: "La automatización de seguimiento nos ayudó a responder más rápido. Subieron las citas agendadas sin aumentar el equipo.",
+    quote: "La automatización de seguimiento aumentó demos agendadas sin aumentar el equipo. El proceso se volvió consistente y medible.",
     name: "Ana P.",
     role: "Marketing Manager",
     company: "Servicios",
@@ -84,4 +84,3 @@ export default function TestimonialsSection() {
     </section>
   );
 }
-
