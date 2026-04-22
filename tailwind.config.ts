@@ -15,18 +15,19 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["DM Sans", "system-ui", "sans-serif"],
-        display: ["DM Sans", "system-ui", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
+        display: ["Barlow Condensed", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
         brand: {
-          bg: "rgb(var(--color-bg-rgb) / <alpha-value>)",
-          surface: "rgb(var(--color-surface-rgb) / <alpha-value>)",
-          border: "rgb(var(--color-border-rgb) / <alpha-value>)",
-          text: "rgb(var(--color-text-rgb) / <alpha-value>)",
-          muted: "rgb(var(--color-text-muted-rgb) / <alpha-value>)",
-          primary: "rgb(var(--color-primary-rgb) / <alpha-value>)",
-          secondary: "rgb(var(--color-secondary-rgb) / <alpha-value>)",
+          bg: "#000000",
+          surface: "#0A0A0A",
+          border: "#2A2A2A",
+          text: "#FFFFFF",
+          muted: "#A0A0A0",
+          primary: "#8B5CF6",
+          secondary: "#3B82F6",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -68,6 +69,28 @@ export default {
           gray: "hsl(var(--clipot-gray))",
           "gray-light": "hsl(var(--clipot-gray-light))",
           black: "hsl(var(--clipot-black))",
+        },
+        electric: {
+          blue: "#00E5FF",
+          dark: "#0099CC",
+        },
+        cobalt: {
+          blue: "#2563EB", // Stripe/Apple blue
+          light: "#3B82F6",
+        },
+        neon: {
+          green: "#39FF14",
+          dark: "#22990C",
+        },
+        light: {
+          bg: "#FFFFFF",
+          surface: "#F9FAFB",
+          border: "#E5E7EB",
+        },
+        dark: {
+          bg: "#0a0a0a",
+          surface: "#111111",
+          border: "#222222",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

@@ -1,22 +1,20 @@
 import Hero from "@/components/Hero";
-import Problema from "@/components/Problema";
-import Solucion from "@/components/Solucion";
-import ComoFunciona from "@/components/ComoFunciona";
-import Soluciones from "@/components/Soluciones";
-import ParaQuien from "@/components/ParaQuien";
-import CTAFinal from "@/components/CTAFinal";
+import PartnershipLoop from "@/components/PartnershipLoop";
+import PainPointSection from "@/components/PainPointSection";
+import NucleusEcosystem from "@/components/NucleusEcosystem";
+import StatsBar from "@/components/StatsBar";
+import DemoBookingSection from "@/components/DemoBookingSection";
 import Footer from "@/components/Footer";
 
 const Page = () => {
   return (
-    <div className="bg-brand-bg min-h-screen text-brand-text overflow-x-hidden">
+    <div className="bg-background min-h-screen text-foreground overflow-x-hidden">
       <Hero />
-      <Problema />
-      <Solucion />
-      <ComoFunciona />
-      <Soluciones />
-      <ParaQuien />
-      <CTAFinal />
+      <PartnershipLoop />
+      <PainPointSection />
+      <NucleusEcosystem />
+      <StatsBar />
+      <DemoBookingSection />
       <Footer />
     </div>
   );

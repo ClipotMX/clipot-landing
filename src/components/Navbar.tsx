@@ -45,8 +45,8 @@ const Navbar = () => {
       className={[
         "fixed top-0 left-0 right-0 z-50",
         "h-14 md:h-16",
-        "bg-[rgb(var(--color-bg-rgb)/0.8)] backdrop-blur-md",
-        isScrolled ? "border-b border-brand-border" : "border-b border-transparent",
+        "bg-background/80 backdrop-blur-md",
+        isScrolled ? "border-b border-border" : "border-b border-transparent",
       ].join(" ")}
     >
       <div className="container mx-auto max-w-6xl h-full px-4 md:px-8 flex items-center justify-between">
@@ -98,7 +98,7 @@ const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden border-b border-brand-border bg-[rgb(var(--color-bg-rgb)/0.92)] backdrop-blur-md"
+            className="md:hidden overflow-hidden bg-background border-b border-border shadow-xl"
           >
             <div className="px-4 pb-5 pt-2 flex flex-col gap-2">
               {links.map((l) => (

@@ -14,8 +14,8 @@ function withEmbedQuery(url: string) {
 }
 
 export default function CalBookingModal({
-  url = "https://cal.com/clipotmx/30min",
-  title = "Agenda tu demostración",
+  url = "https://cal.com/clipotmx/asesoria",
+  title = "Agenda tu asesoria",
   className,
   onTrigger,
   children,

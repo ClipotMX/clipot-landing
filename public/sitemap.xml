@@ -2,35 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://clipot.com/</loc>
-  </url>
-  <url>
-    <loc>https://clipot.com/nosotros</loc>
-  </url>
-  <url>
-    <loc>https://clipot.com/servicios</loc>
-  </url>
-  <url>
-    <loc>https://clipot.com/portfolio</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://clipot.com/blog</loc>
-  </url>
-  <url>
-    <loc>https://clipot.com/servicios/negocio-digital</loc>
-  </url>
-  <url>
-    <loc>https://clipot.com/servicios/negocio-plus</loc>
-  </url>
-  <url>
-    <loc>https://clipot.com/servicios/negocio-total</loc>
-  </url>
-  <url>
-    <loc>https://clipot.com/contacto</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://clipot.com/privacidad</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://clipot.com/terminos</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

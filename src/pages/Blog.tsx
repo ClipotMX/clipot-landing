@@ -61,13 +61,9 @@ const Blog = () => {
       {/* Hero */}
       <section className="pt-32 pb-20 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl mx-auto text-center"
-          >
+          <div className="max-w-3xl mx-auto text-center" data-aos="fade-up">
             <span className="text-sm font-medium text-primary mb-4 block">BLOG</span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 italic">
               <span className="sr-only">Agencia de marketing digital</span>
               Tips & Tricks
             </h1>
@@ -75,21 +71,19 @@ const Blog = () => {
               Estrategias, tácticas y aprendizajes de gestionar miles de leads. 
               Sin relleno, solo lo que funciona.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Posts Grid */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => (
               <Link key={post.slug} to={`/blog/${post.slug}`}>
-                <motion.article
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                <article
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
                   className="bg-background rounded-2xl overflow-hidden group cursor-pointer h-full shadow-sm ring-1 ring-border hover:shadow-md transition-shadow"
                 >
                   <div className="aspect-[3/2] overflow-hidden">
@@ -99,28 +93,27 @@ const Blog = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 mb-3">
-                      <span className="text-xs font-medium text-primary uppercase tracking-wider">
+                  <div className="p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-xs font-mono uppercase tracking-widest text-primary px-3 py-1 bg-primary/5 rounded-full border border-primary/10">
                         {post.category}
                       </span>
-                      <span className="flex items-center text-xs text-muted-foreground">
-                        <Clock size={12} className="mr-1" />
+                      <div className="flex items-center gap-1.5 text-muted-foreground text-xs">
+                        <Clock className="w-3.5 h-3.5" />
                         {post.readTime}
-                      </span>
+                      </div>
                     </div>
-                    <h2 className="font-display text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                    <h2 className="text-xl font-display font-bold text-white mb-4 group-hover:text-primary transition-colors italic">
                       {post.title}
                     </h2>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                    <p className="text-muted-foreground text-sm line-clamp-3 leading-relaxed mb-6">
                       {post.excerpt}
                     </p>
-                    <span className="inline-flex items-center text-sm font-medium text-primary">
-                      Leer más
-                      <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                    </span>
+                    <div className="flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">
+                      Leer artículo <ArrowRight className="w-4 h-4" />
+                    </div>
                   </div>
-                </motion.article>
+                </article>
               </Link>
             ))}
             {posts.length === 0 && (

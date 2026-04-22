@@ -77,11 +77,7 @@ const BlogPost = () => {
       {/* Hero */}
       <section className="pt-32 pb-12 bg-background">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl mx-auto"
-          >
+          <div className="max-w-3xl mx-auto" data-aos="fade-up">
             <Link
               to="/blog"
               className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6 transition-colors"
@@ -91,64 +87,58 @@ const BlogPost = () => {
             </Link>
 
             {post.category && (
-              <span className="text-sm font-medium text-primary uppercase tracking-wider">
+              <span className="text-sm font-mono uppercase tracking-widest text-primary px-3 py-1 bg-primary/5 rounded-full border border-primary/10">
                 {post.category}
               </span>
             )}
 
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6 italic">
               {post.title}
             </h1>
 
-            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <span className="flex items-center">
-                <User size={16} className="mr-2" />
-                {post.author || "Clipot"}
-              </span>
-              <span className="flex items-center">
-                <Calendar size={16} className="mr-2" />
-                {new Date(post.ts).toLocaleDateString()}
-              </span>
-              <span className="flex items-center">
-                <Clock size={16} className="mr-2" />
-                {(post.readTime || "5 min")} de lectura
-              </span>
+            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground mb-12">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-4 h-4 text-primary" />
+                {new Date(post.publish_at || post.ts || Date.now()).toLocaleDateString("es-MX", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-primary" />
+                {post.readTime || post.read_time || "5 min"} de lectura
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Featured Image */}
-      <section className="pb-12 bg-background">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="max-w-4xl mx-auto"
-          >
-            {post.image && (
+      {post.image && (
+        <section className="pb-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10" data-aos="zoom-in">
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full aspect-video object-cover rounded-3xl"
+                className="w-full aspect-[21/9] object-cover"
               />
-            )}
-          </motion.div>
-        </div>
-      </section>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Content */}
-      <section className="py-12 bg-background">
+      <section className="pb-24 bg-background">
         <div className="container mx-auto px-4">
-          <motion.article
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="max-w-3xl mx-auto prose prose-lg prose-neutral dark:prose-invert"
-          >
-            <div className="text-muted-foreground leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: String(post.content || "") }} />
-          </motion.article>
+          <div className="max-w-3xl mx-auto">
+            <article 
+              className="prose prose-invert prose-lg max-w-none prose-headings:font-display prose-headings:italic prose-headings:font-bold prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary hover:prose-a:text-primary/80 transition-colors"
+              dangerouslySetInnerHTML={{ __html: post.content || "" }}
+              data-aos="fade-up"
+            />
+          </div>
         </div>
       </section>
 

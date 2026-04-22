@@ -1,41 +1,64 @@
 import Hero from "@/components/Hero";
-import Problema from "@/components/Problema";
-import Solucion from "@/components/Solucion";
-import ComoFunciona from "@/components/ComoFunciona";
-import Soluciones from "@/components/Soluciones";
-import ParaQuien from "@/components/ParaQuien";
-import CTA from "@/components/CTA";
+import PartnershipLoop from "@/components/PartnershipLoop";
+import PainPointSection from "@/components/PainPointSection";
+import StatsBar from "@/components/StatsBar";
+import NucleusEcosystem from "@/components/NucleusEcosystem";
+import LeadCapture from "@/components/LeadCapture";
+import LeadMagnet from "@/components/LeadMagnet";
 import Footer from "@/components/Footer";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import ClientsCarouselSection from "@/components/ClientsCarouselSection";
-import PlansShowcase from "@/components/PlansShowcase";
+import Header from "@/components/Header";
 import SEO from "@/components/SEO";
 
 const LandingPage = () => {
   return (
-    <div className="bg-brand-bg min-h-screen text-brand-text overflow-x-hidden">
+    <div className="dark bg-background min-h-screen text-white overflow-x-hidden font-sans">
       <SEO
-        title="Negocio Core | Transformación operativa y mejora de procesos en México – Clipot"
-        description="Implementamos Negocio Core: integración, capacitación y soporte continuo para mejorar procesos, reducir errores y aumentar productividad. Sede en Guadalajara; atendemos todo México."
+        title="Clipot | NUCLEUS — Ingeniería de Infraestructura Digital"
+        description="Construimos los sistemas que tu empresa necesita para escalar. CRM, ERP y automatización con arquitectura NUCLEUS."
         keywords={[
-          "transformación digital méxico",
-          "mejora de procesos",
-          "automatización empresarial",
-          "integraciones crm shopify pos",
-          "negocio core",
-          "guadalajara jalisco",
+          "ingeniería digital",
+          "infraestructura de negocios",
+          "BOS",
+          "NUCLEUS",
+          "automatización de procesos",
+          "CRM ERP integración",
+          "escalabilidad digital",
         ]}
       />
-      <Hero />
-      <Problema />
-      <Solucion />
-      <ComoFunciona />
-      <Soluciones />
-      <ParaQuien />
-      <ClientsCarouselSection />
-      <TestimonialsSection />
-      <PlansShowcase />
-      <CTA />
+      <Header />
+      <div id="home">
+        <Hero />
+      </div>
+      <div id="partners" data-aos="fade-up">
+        <PartnershipLoop />
+      </div>
+      <div id="pain-points">
+        <PainPointSection />
+      </div>
+      
+      <LeadMagnet 
+        title="Guía: Los 5 puntos ciegos de tu CRM"
+        subtitle="Cómo evitar que tu equipo pierda el 40% de sus leads"
+        buttonText="Descargar Guía Gratis"
+      />
+
+      <div id="ecosystem">
+        <NucleusEcosystem />
+      </div>
+
+      <LeadMagnet 
+        title="Plantilla de Auditoría Operativa"
+        subtitle="Identifica procesos manuales que están matando tu rentabilidad"
+        buttonText="Obtener Plantilla"
+      />
+
+      <div id="stats">
+        <StatsBar />
+      </div>
+
+      <div id="contact">
+        <LeadCapture />
+      </div>
       <Footer />
     </div>
   );

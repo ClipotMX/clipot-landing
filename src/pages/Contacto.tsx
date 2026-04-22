@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export default function Contacto() {
   return (
-    <div className="min-h-screen bg-brand-bg text-brand-text overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <SEO
         title="Agendar demostración | Negocio Core – Clipot"
         description="Solicita una demostración de Negocio Core. WhatsApp es el canal principal y Cal.com está disponible como alternativa de agendamiento automatizado."
@@ -17,7 +17,9 @@ export default function Contacto() {
         ]}
         canonical="/contacto"
       />
-      <DemoBookingSection />
+      <div data-aos="fade-up">
+        <DemoBookingSection />
+      </div>
       <Footer />
     </div>
   );
