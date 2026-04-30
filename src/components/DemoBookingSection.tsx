@@ -37,7 +37,7 @@ type DemoValues = z.infer<typeof demoSchema>;
 
 function buildMessage(values: DemoValues) {
   const lines = [
-    "Hola Clipot, quiero agendar una Auditoría de Preparación Digital (AI Audit Gateway).",
+    "Hola Clipot, quiero agendar una Auditoría de Preparación Digital.",
     "",
     `Nombre: ${values.fullName}`,
     `Empresa: ${values.company}`,
@@ -71,27 +71,40 @@ export default function DemoBookingSection() {
   const onSubmit = async (values: DemoValues) => {
     track("Demo Form Submitted", { channel: "whatsapp" });
     
-    const airtableUrl = import.meta.env.VITE_AIRTABLE_FORM_URL;
-    if (airtableUrl) {
+    const apiKey = import.meta.env.VITE_AIRTABLE_API_KEY;
+    const baseId = import.meta.env.VITE_AIRTABLE_BASE_ID;
+    const tableName = import.meta.env.VITE_AIRTABLE_TABLE_NAME;
+    
+    if (apiKey && baseId && tableName) {
       try {
-        await fetch(airtableUrl, {
+        const url = "https://api.airtable.com/v0/" + baseId + "/" + tableName;
+        const response = await fetch(url, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Authorization": "Bearer " + apiKey,
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify({
             fields: {
-              "Nombre": values.fullName,
+              "Name": values.fullName,
               "Empresa": values.company,
               "Email": values.email,
-              "Teléfono": values.phone,
-              "Interés": values.interest,
+              "Telefono": values.phone,
+              "Interes": values.interest,
               "Fecha": values.preferredDate,
               "Hora": values.preferredTime,
               "Mensaje": values.message || "",
             },
           }),
         });
+        if (!response.ok) {
+          const errorData = await response.json();
+          console.warn("Airtable warning (datos enviados igual):", errorData);
+        } else {
+          console.log("✓ Datos enviados a Airtable correctamente");
+        }
       } catch (error) {
-        console.error("Airtable error:", error);
+        console.warn("Airtable error (continuando...):", error);
       }
     }
     
@@ -102,7 +115,7 @@ export default function DemoBookingSection() {
     <section id="contacto" className="scroll-mt-[80px] bg-background text-foreground py-28 px-4 md:px-8">
       <div className="container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div data-aos="fade-right">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight italic">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight">
             Agenda una auditoría de preparación digital
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
@@ -192,7 +205,7 @@ export default function DemoBookingSection() {
                           <SelectValue placeholder="Selecciona una opción" />
                         </SelectTrigger>
                       </FormControl>
-                      <SelectContent className="bg-surface border-border">
+                      <SelectContent className="bg-card border-border">
                         {interests.map((interest) => (
                           <SelectItem key={interest} value={interest}>
                             {interest}
@@ -270,19 +283,21 @@ export default function DemoBookingSection() {
               />
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <CalBookingModal
-                  className={cn(buttonVariants({ variant: "default" }), "h-11 w-full sm:w-auto")}
-                  title="Agenda tu Auditoría de Preparación Digital (AI Audit Gateway)"
+                <Button 
+                  type="button"
+                  variant="default"
+                  className="h-11 w-full sm:w-auto"
+                  onClick={() => form.handleSubmit(onSubmit)()}
                 >
                   Agenda tu Auditoría
-                </CalBookingModal>
+                </Button>
                 <Button type="submit" variant="outline" className="h-11 w-full sm:w-auto">
                   Enviar por WhatsApp
                 </Button>
               </div>
             </form>
           </Form>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

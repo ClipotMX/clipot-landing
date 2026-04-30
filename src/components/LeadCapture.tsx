@@ -13,12 +13,11 @@ const LeadCapture = () => {
     const formData = new FormData(e.currentTarget);
     const data = {
       fields: {
-        Nombre: formData.get("name"),
-        Email: formData.get("email"),
-        Telefono: formData.get("phone"),
-        Interes: formData.get("interest"),
-        Mensaje: formData.get("message"),
-        Fecha: new Date().toISOString(),
+        "Nombre": formData.get("name"),
+        "Email": formData.get("email"),
+        "Telefono": formData.get("phone"),
+        "Interes": formData.get("interest"),
+        "Mensaje": formData.get("message"),
       }
     };
 
@@ -26,7 +25,7 @@ const LeadCapture = () => {
       // Usar variables de entorno para Airtable
       const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY;
       const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID;
-      const AIRTABLE_TABLE_NAME = import.meta.env.VITE_AIRTABLE_TABLE_NAME || "Leads";
+      const AIRTABLE_TABLE_NAME = import.meta.env.VITE_AIRTABLE_TABLE_NAME || "Web_Leads";  
 
       if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID) {
         throw new Error("Airtable configuration missing");
@@ -48,7 +47,7 @@ const LeadCapture = () => {
       toast.success("Mensaje enviado correctamente. Nos pondremos en contacto pronto.");
       (e.target as HTMLFormElement).reset();
     } catch (error) {
-      console.error("Airtable Error:", error);
+      console.error(error);
       // Fallback para que el usuario no se quede sin respuesta si no ha configurado las variables
       if (error instanceof Error && error.message === "Airtable configuration missing") {
         toast.info("Configuración de Airtable pendiente, pero simulamos envío exitoso.");
@@ -57,6 +56,7 @@ const LeadCapture = () => {
         }, 1000);
       } else {
         toast.error("Hubo un error al enviar el mensaje. Por favor intenta de nuevo.");
+        console.error();
       }
     } finally {
       setIsSubmitting(false);
@@ -72,21 +72,21 @@ const LeadCapture = () => {
         >
           <div className="md:w-1/2 p-8 md:p-12 bg-primary flex flex-col justify-between">
             <div data-aos="fade-right" data-aos-delay="200">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-black mb-6 italic">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6 italic">
                 Construyamos tu infraestructura digital.
               </h2>
-              <p className="text-black/70 font-medium mb-8">
-                Déjanos tus datos y un especialista en sistemas NUCLEUS se pondrá en contacto para una auditoría inicial.
+              <p className="text-white/70 font-medium mb-8">
+                Déjanos tus datos y alguien de nuestro equipo se contactara con tu pronto.
               </p>
             </div>
             <div className="space-y-4" data-aos="fade-up" data-aos-delay="400">
-              <div className="flex items-center gap-3 text-black font-mono text-sm">
-                <span className="w-8 h-[1px] bg-black/30" />
-                AUDITORÍA_SIN_COSTO
+              <div className="flex items-center gap-3 text-white font-mono text-sm">
+                <span className="w-8 h-[1px] bg-white/30" />
+                AUDITORÍA SIN COSTO
               </div>
-              <div className="flex items-center gap-3 text-black font-mono text-sm">
-                <span className="w-8 h-[1px] bg-black/30" />
-                ESCALABILIDAD_GARANTIZADA
+              <div className="flex items-center gap-3 text-white font-mono text-sm">
+                <span className="w-8 h-[1px] bg-white/30" />
+                RESULTADOS EN 30 DÍAS GARANTIZADOS
               </div>
             </div>
           </div>
@@ -98,7 +98,7 @@ const LeadCapture = () => {
                 <input
                   required
                   type="text"
-                  name="name"
+                  name="nombre"
                   placeholder="Ej. Juan Pérez"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary transition-colors outline-none"
                 />
@@ -133,9 +133,10 @@ const LeadCapture = () => {
                   name="interest"
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary transition-colors outline-none appearance-none"
                 >
-                  <option value="lite" className="bg-[#111114]">Nucleus Lite (POS / Sistemas Simples)</option>
-                  <option value="digital" className="bg-[#111114]">Nucleus Digital (CRM + ERP + Pauta)</option>
-                  <option value="total" className="bg-[#111114]">Nucleus Total (Escalamiento All-in-one)</option>
+                  <option value="lite" className="bg-[#111114]">Nucleus Lite</option>
+                  <option value="digital" className="bg-[#111114]">Nucleus Digital</option>
+                  <option value="total" className="bg-[#111114]">Nucleus Total</option>
+                  <option value="other" className="bg-[#111114]">Otra Consulta</option>
                 </select>
               </div>
 

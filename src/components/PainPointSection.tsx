@@ -33,7 +33,7 @@ const PainPointSection = () => {
             El caos operativo es el <span className="text-primary">techo de tu crecimiento.</span>
           </h2>
           <p className="text-muted-foreground text-lg font-mono">
-            [ PROBLEMAS_IDENTIFICADOS ]
+             PROBLEMAS IDENTIFICADOS 
           </p>
         </div>
 

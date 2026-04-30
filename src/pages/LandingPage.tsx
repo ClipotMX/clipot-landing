@@ -1,9 +1,10 @@
 import Hero from "@/components/Hero";
 import PartnershipLoop from "@/components/PartnershipLoop";
 import PainPointSection from "@/components/PainPointSection";
-import StatsBar from "@/components/StatsBar";
+//import StatsBar from "@/components/StatsBar";
 import NucleusEcosystem from "@/components/NucleusEcosystem";
-import LeadCapture from "@/components/LeadCapture";
+//import LeadCapture from "@/components/LeadCapture";
+import DemoBookingSection from "@/components/DemoBookingSection";
 import LeadMagnet from "@/components/LeadMagnet";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -13,16 +14,18 @@ const LandingPage = () => {
   return (
     <div className="dark bg-background min-h-screen text-white overflow-x-hidden font-sans">
       <SEO
-        title="Clipot | NUCLEUS — Ingeniería de Infraestructura Digital"
-        description="Construimos los sistemas que tu empresa necesita para escalar. CRM, ERP y automatización con arquitectura NUCLEUS."
+        title="Clipot | Soluciones Digitales Empresariales"
+        description="Adaptamos los sistemas que tu empresa necesita para escalar. CRM, ERP y automatización con arquitectura NUCLEUS."
         keywords={[
           "ingeniería digital",
           "infraestructura de negocios",
           "BOS",
-          "NUCLEUS",
+          "Nucleus",
           "automatización de procesos",
           "CRM ERP integración",
           "escalabilidad digital",
+          "business intelligence",
+          "data analysis",
         ]}
       />
       <Header />
@@ -35,8 +38,8 @@ const LandingPage = () => {
       <div id="pain-points">
         <PainPointSection />
       </div>
-      
-      <LeadMagnet 
+
+      <LeadMagnet
         title="Guía: Los 5 puntos ciegos de tu CRM"
         subtitle="Cómo evitar que tu equipo pierda el 40% de sus leads"
         buttonText="Descargar Guía Gratis"
@@ -45,19 +48,20 @@ const LandingPage = () => {
       <div id="ecosystem">
         <NucleusEcosystem />
       </div>
-
-      <LeadMagnet 
+ { /* 
+      <LeadMagnet
         title="Plantilla de Auditoría Operativa"
         subtitle="Identifica procesos manuales que están matando tu rentabilidad"
         buttonText="Obtener Plantilla"
       />
-
-      <div id="stats">
+*/}
+      { /* 
+     <div id="stats">
         <StatsBar />
       </div>
-
+*/}
       <div id="contact">
-        <LeadCapture />
+        <DemoBookingSection />
       </div>
       <Footer />
     </div>

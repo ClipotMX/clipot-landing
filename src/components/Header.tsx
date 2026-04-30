@@ -11,7 +11,6 @@ const navLinks = [
   { name: "Socios", href: "#partners" },
   { name: "Problemas", href: "#pain-points" },
   { name: "Ecosistema", href: "#ecosystem" },
-  { name: "Resultados", href: "#stats" },
   { name: "Contacto", href: "#contact" },
 ];
 
@@ -48,7 +47,7 @@ const Header = () => {
               className="px-6 py-2.5 bg-white text-black text-xs font-mono font-bold uppercase tracking-widest rounded-full hover:bg-primary transition-all"
               title="Agenda tu Auditoría de Preparación Digital"
             >
-              Agenda Demostracion
+              Diagnostico Gratuito
             </CalBookingModal>
           </div>
 

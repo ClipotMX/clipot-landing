@@ -158,7 +158,7 @@ export const blogPosts: BlogPost[] = [
     author: "Equipo Clipot",
     image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
     content: [
-      "WhatsApp es el canal de comunicación #1 en LATAM. Si no estás automatizando tus respuestas, estás perdiendo leads mientras duermes. Esta guía te enseña cómo configurar flujos que trabajan 24/7.",
+      "WhatsApp es el canal de comunicación #1 en LATAM. Si no estás automatizando tus respuestas, estás perdiendo leads. Esta guía te enseña cómo configurar flujos que trabajan de 9 a 5.",
       
       "## Por qué automatizar WhatsApp",
       "Los datos son claros: el 90% de los consumidores esperan respuesta inmediata. Pero no puedes estar disponible 24/7. La automatización resuelve esto: responde instantáneamente, califica al lead y prepara el terreno para cuando tu equipo de ventas tome el control.",
